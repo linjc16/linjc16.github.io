@@ -18,7 +18,7 @@ Education
   - Outstanding Graduate of Tsinghua University
   - Outstanding Graduate of the Department of Automation at Tsinghua University
   - Outstanding MS Thesis of Tsinghua University
-* Ph.D. in [University of Illinois Urbana-Champaign](https://illinois.edu/), 2023-Present
+* Ph.D. in [University of Illinois Urbana-Champaign](https://illinois.edu/), advised by [Jimeng Sun](https://www.sunlab.org/) 2023-Present
 
 Work experience
 ======
