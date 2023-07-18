@@ -4,7 +4,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-# Publications
 (*=equal contribution)
 ## Journals
 - **Jiacheng Lin**, Lijun Wu, Jinhua Zhu, Xiaobo Liang, Yingce Xia, Shufang Xie, Tao Qin and Tie-Yan Liu, R<sup>2</sup>-DDI: Relation-aware Feature Refinement for Drug-Drug Interaction Prediction, **_Briefings in Bioinformatics_**. [[PDF]](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbac576/6961471?utm_source=authortollfreelink&utm_campaign=bib&utm_medium=email&guestAccessKey=189b0995-bc41-40fc-b625-bf34b44ff21e&login=true)[[CODE]](https://github.com/linjc16/R2-DDI)
