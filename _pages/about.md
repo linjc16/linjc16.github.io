@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Computer Science Ph.D. candidate at the [University of Illinois Urbana-Champaign](https://illinois.edu/) advised by Prof. [Jimeng Sun](https://www.sunlab.org/). Before that, I earned my B.Eng and MS degree in Automation at Tsinghua University.
+I am a Computer Science Ph.D. student at the [University of Illinois Urbana-Champaign](https://illinois.edu/) advised by Prof. [Jimeng Sun](https://www.sunlab.org/). Before that, I earned my B.Eng and MS degree in Automation at Tsinghua University.
 
 A data-driven personal website
 ======
