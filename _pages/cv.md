@@ -13,7 +13,7 @@ Education
 ======
 * B.S. in [Tsinghua University](https://www.tsinghua.edu.cn/), 2016-2020
   - Outstanding Graduate of the Department of Automation at Tsinghua University
-* M.S. in [Tsinghua University](https://www.tsinghua.edu.cn/), 2020-2023
+* M.S. in [Tsinghua University](https://www.tsinghua.edu.cn/), advised by [Huangang Wang](https://www.au.tsinghua.edu.cn/info/1107/1557.htm), 2020-2023.
   - Outstanding Graduate of Beijing
   - Outstanding Graduate of Tsinghua University
   - Outstanding Graduate of the Department of Automation at Tsinghua University
