@@ -4,11 +4,6 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
 # Teaching
 - Teaching Assistant @ Tsinghua University
   - Spring 2020, Operations Research with Prof. Huangang Wang
