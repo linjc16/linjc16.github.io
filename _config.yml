@@ -87,7 +87,7 @@ author:
     Ph.D. Student, <br>
     University of Illinois Urbana-Champaign (UIUC)
   location         : "Champaign, IL, United States"
-  employer         : "University of Illinois Urbana-Champaign"
+  employer         : # "University of Illinois Urbana-Champaign"
   googlescholar    : # "http://yourfullgooglescholarurl.com"
   email            : "jl254@illinois.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
