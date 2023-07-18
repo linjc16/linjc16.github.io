@@ -13,7 +13,7 @@ I am a Computer Science Ph.D. student at the [University of Illinois Urbana-Cham
 My research interests revolve around AI4Science, including
 - Drug Discovery
 - Natural Language Processing (especially in healthcare domain)
-- Multi-modal Learning (gene, drug, protein, etc.)
+- Multi-modal Learning (text, gene, drug, protein, etc.)
 
 _I am currently seeking research-oriented internship opportunities for the summer of 2024. Please contact me if you have any recruitment openings._
 
