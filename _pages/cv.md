@@ -35,6 +35,10 @@ Honors
 - Scholarship of Academic Excellence of Tsinghua University, 2017
 - Scholarship of Technological Innovation of Tsinghua University, 2019
 - Scholarship of Outstanding Social Work of Tsinghua University, 2017 & 2019
+- Outstanding Graduate of Beijing in China, 2023
+- Outstanding Graduate of Tsinghua University, 2023
+- Outstanding Graduate of the Department of Automation at Tsinghua University, 2020 & 2023
+- Outstanding MS Thesis of Tsinghua University, 2023
 
 Activities
 ======
