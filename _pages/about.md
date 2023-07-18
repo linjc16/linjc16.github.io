@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Computer Science Ph.D. student at the [University of Illinois Urbana-Champaign](https://illinois.edu/) advised by Prof. [Jimeng Sun](https://www.sunlab.org/). Before that, I earned my B.Eng and MS degree in Automation at [Tsinghua University](https://www.tsinghua.edu.cn/).
+I am a Computer Science Ph.D. student at the [University of Illinois Urbana-Champaign](https://illinois.edu/) advised by Prof. [Jimeng Sun](https://www.sunlab.org/). Before that, I earned my B.Eng and MS degree in Automation at [Tsinghua University](https://www.tsinghua.edu.cn/). I am also working closely with Prof. [Sheng Wang](https://homes.cs.washington.edu/~swang/) and Dr. [Lijun Wu](https://apeterswu.github.io/).
 
 My research interests revolve around **AI4Science**, including
 - Drug Discovery
