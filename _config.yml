@@ -85,11 +85,11 @@ author:
   avatar           : "jc.jpg"
   bio              : |
     Ph.D. Student, <br>
-    University of Illinois Urbana-Champaign
+    University of Illinois Urbana-Champaign (UIUC)
   location         : "Champaign, IL, United States"
-  employer         :
+  employer         : "University of Illinois Urbana-Champaign"
   googlescholar    : # "http://yourfullgooglescholarurl.com"
-  email            :
+  email            : "jl254@illinois.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -104,7 +104,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/jiacheng-lin-8754441a0/"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
