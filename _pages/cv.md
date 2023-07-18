@@ -25,7 +25,7 @@ Work experience
 - 2022.3-2022.6: Research Intern at [Microsoft Research Asia](https://www.msra.cn/), advised by [Lijun Wu](https://apeterswu.github.io/) and [Tao Qin](https://www.microsoft.com/en-us/research/people/taoqin/)
 - 2022.11-2023.7: Research Intern at [Microsoft Research AI4Science](https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/), advised by [Lijun Wu](https://apeterswu.github.io/) and [Tao Qin](https://www.microsoft.com/en-us/research/people/taoqin/)
 
-Honors
+Honors & Achievements
 ======
 - Intel Fellowship for Graduates of Tsinghua University, 2022
 - Stars of Tomorrow Internship Award of Microsoft Research Asia, 2022
