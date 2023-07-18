@@ -10,7 +10,7 @@ redirect_from:
 
 I am a Computer Science Ph.D. student at the [University of Illinois Urbana-Champaign](https://illinois.edu/) advised by Prof. [Jimeng Sun](https://www.sunlab.org/). Before that, I earned my B.Eng and MS degree in Automation at [Tsinghua University](https://www.tsinghua.edu.cn/).
 
-My research interests revolve around AI4Science, including
+My research interests revolve around **AI4Science**, including
 - Drug Discovery
 - Natural Language Processing (especially in the healthcare domain)
 - Multi-modal Learning (text, gene, drug, protein, etc.)
