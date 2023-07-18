@@ -12,7 +12,7 @@ I am a Computer Science Ph.D. student at the [University of Illinois Urbana-Cham
 
 My research interests revolve around AI4Science, including
 - Drug Discovery
-- Natural Language Processing (especially in healthcare domain)
+- Natural Language Processing (especially in the healthcare domain)
 - Multi-modal Learning (text, gene, drug, protein, etc.)
 
 _I am currently seeking research-oriented internship opportunities for the summer of 2024. Please contact me if you have any recruitment openings._
@@ -21,4 +21,4 @@ _I am currently seeking research-oriented internship opportunities for the summe
 Selected Papers
 ======
 - **Jiacheng Lin**∗, Hanwen Xu∗, Addie Woicik, Jianzhu Ma and Sheng Wang, Pisces: A cross-modal contrastive learning approach to synergistic drug combination prediction, RECOMB, 2023. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v1)[[CODE]](https://github.com/linjc16/Pisces)
-- **Jiacheng Lin**, Lijun Wu, Jinhua Zhu, Xiaobo Liang, Yingce Xia, Shufang Xie, Tao Qin and Tie-Yan Liu, R<sup>2</sup>-DDI: Relation-aware Feature Refinement for Drug-Drug Interaction Prediction, Briefings in Bioinformatics.[[PDF]](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbac576/6961471?utm_source=authortollfreelink&utm_campaign=bib&utm_medium=email&guestAccessKey=189b0995-bc41-40fc-b625-bf34b44ff21e&login=true)[[CODE]](https://github.com/linjc16/R2-DDI)
+- **Jiacheng Lin**, Lijun Wu, Jinhua Zhu, Xiaobo Liang, Yingce Xia, Shufang Xie, Tao Qin and Tie-Yan Liu, R<sup>2</sup>-DDI: Relation-aware Feature Refinement for Drug-Drug Interaction Prediction, Briefings in Bioinformatics. [[PDF]](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbac576/6961471?utm_source=authortollfreelink&utm_campaign=bib&utm_medium=email&guestAccessKey=189b0995-bc41-40fc-b625-bf34b44ff21e&login=true)[[CODE]](https://github.com/linjc16/R2-DDI)
