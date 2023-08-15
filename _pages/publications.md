@@ -8,7 +8,7 @@ author_profile: true
 
 Preprint
 =======
-- Hanwen Xu*, **Jiacheng Lin***, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, preprint, 2023. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
+- Hanwen Xu*, **Jiacheng Lin**∗, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, preprint, 2023. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
 
 Journals
 ========
