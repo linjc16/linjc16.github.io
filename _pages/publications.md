@@ -9,6 +9,7 @@ author_profile: true
 Preprint
 =======
 - Hanwen Xu*, **Jiacheng Lin**∗, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, preprint, 2023. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
+- Kaiyuan Gao, Sunan He, Zhenyu He, **Jiacheng Lin** (_All authors contribute equally_), QiZhi Pei, Jie Shao, Wei Zhang, Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2308.14149.pdf)[[Repo]](https://github.com/GPT-Alternatives/gpt_alternatives)
 
 Journals
 ========
