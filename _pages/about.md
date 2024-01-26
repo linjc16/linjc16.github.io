@@ -17,6 +17,9 @@ My research interests revolve around **AI4Science**, including
 
 _I am currently seeking research-oriented internship opportunities for the summer of 2024. Please contact me if you have any recruitment openings._
 
+News
+======
+01/2024 Our [CAMBranch: Contrastive Learning with Augmented MILPs for Branching](https://openreview.net/forum?id=K6kt50zAiG&noteId=eAKTDVd6fy) is accepted by *ICLR 2024*.<br>
 
 Selected Papers
 ======
