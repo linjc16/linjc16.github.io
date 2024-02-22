@@ -13,7 +13,7 @@ Preprint
 - Chenlin Ming, **Jiacheng Lin**, Pangkit Fong, Han Wang, Xiaoming Duan and Jianping He, HiCRISP: A Hierarchical Closed-Loop Robotic Intelligent
 Self-Correction Planner, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2309.12089.pdf)[[CODE]](https://github.com/ming-bot/HiCRISP)
 - Ziyi Chen, Xiaocong Yang, **Jiacheng Lin**, Chenkai Sun, Kevin Chen-Chuan Chang, and Jie Huang, Cascade Speculative Drafting for Even Faster LLM Inference, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2312.11462.pdf)
-- Pengcheng Jiang , Jiacheng Lin , Zifeng Wang , Jimeng Sun , and Jiawei Han, GENRES: Rethinking Evaluation for Generative Relation Extraction in the Era of Large Language Models, preprint, 2024. [[PDF]](https://arxiv.org/pdf/2402.10744.pdf)
+- Pengcheng Jiang, **Jiacheng Lin**, Zifeng Wang, Jimeng Sun, and Jiawei Han, GENRES: Rethinking Evaluation for Generative Relation Extraction in the Era of Large Language Models, preprint, 2024. [[PDF]](https://arxiv.org/pdf/2402.10744.pdf)
 
 
 Journals
