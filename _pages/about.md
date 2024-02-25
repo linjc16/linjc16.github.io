@@ -11,9 +11,10 @@ redirect_from:
 I am a Computer Science Ph.D. student at [University of Illinois Urbana-Champaign](https://illinois.edu/) advised by Prof. [Jimeng Sun](https://www.sunlab.org/). Before that, I earned my B.Eng and MS degree in Automation at [Tsinghua University](https://www.tsinghua.edu.cn/). I am also working closely with Prof. [Sheng Wang](https://homes.cs.washington.edu/~swang/) and Dr. [Lijun Wu](https://apeterswu.github.io/).
 
 My research interests revolve around **AI4Science**, including
-- Drug Discovery
 - Natural Language Processing (especially in the healthcare domain)
+- Knowledge Graph & Large Language Models
 - Multi-modal Learning (text, gene, drug, protein, etc.)
+- Drug Discovery
 
 _I am currently seeking research-oriented internship opportunities for the summer of 2024. Please contact me if you have any recruitment openings._
 
