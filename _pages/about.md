@@ -20,6 +20,8 @@ _I am currently seeking research-oriented internship opportunities for the summe
 
 News
 ======
+05/2024 Starting **Applied Scientist Internship** at Amazon, Palo Alto.
+
 03/2024 Our [GENRES: Rethinking Evaluation for Generative Relation Extraction in the Era of Large Language Models](https://arxiv.org/pdf/2402.10744.pdf) is accepted by *NAACL 2024*.<br>
 
 01/2024 Our [CAMBranch: Contrastive Learning with Augmented MILPs for Branching](https://openreview.net/forum?id=K6kt50zAiG&noteId=eAKTDVd6fy) is accepted by *ICLR 2024*.<br>
