@@ -22,6 +22,7 @@ Education
 
 Work experience
 ======
+- 2024.5-2024.8: Applied Scientist Intern at Amazon Search, advised by Kun Qian, Sheng Wang and Danai Koutra
 - 2022.11-2023.7: Research Intern at [Microsoft Research AI4Science](https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/), advised by [Lijun Wu](https://apeterswu.github.io/) and [Tao Qin](https://www.microsoft.com/en-us/research/people/taoqin/)
 - 2022.3-2022.6: Research Intern at [Microsoft Research Asia](https://www.msra.cn/), advised by [Lijun Wu](https://apeterswu.github.io/) and [Tao Qin](https://www.microsoft.com/en-us/research/people/taoqin/)
 
