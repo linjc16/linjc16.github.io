@@ -20,7 +20,9 @@ _I am currently seeking research-oriented internship opportunities for the summe
 
 News
 ======
-05/2024 Starting **Applied Scientist Internship** at Amazon, Palo Alto.
+09/2024 Our [Cascade Speculative Drafting for Even Faster LLM Inference](https://openreview.net/pdf?id=lZY9u0ijP7) is accepted by *NeurIPS 2024*.<br>
+
+05/2024 Starting **Applied Scientist Internship** at Amazon, Palo Alto.<br>
 
 03/2024 Our [GENRES: Rethinking Evaluation for Generative Relation Extraction in the Era of Large Language Models](https://arxiv.org/pdf/2402.10744.pdf) is accepted by *NAACL 2024*.<br>
 
