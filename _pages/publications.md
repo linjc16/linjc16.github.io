@@ -11,9 +11,8 @@ Preprint
 - **Jiacheng Lin**, Hanwen Xu, Zifeng Wang, Sheng Wang, Jimeng Sun, Panacea: A foundation model for clinical trial search, summarization, design, and recruitment, preprint, 2024. [[PDF]](https://www.medrxiv.org/content/medrxiv/early/2024/06/27/2024.06.26.24309548.full.pdf)[[CODE]](https://github.com/linjc16/Panacea)
 - Hanwen Xu*, **Jiacheng Lin**∗, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, preprint, 2023. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
 - Kaiyuan Gao, Sunan He, Zhenyu He, **Jiacheng Lin** (_All authors contribute equally_), QiZhi Pei, Jie Shao, Wei Zhang, Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2308.14149.pdf)[[Repo]](https://github.com/GPT-Alternatives/gpt_alternatives)
-- Chenlin Ming, **Jiacheng Lin**, Pangkit Fong, Han Wang, Xiaoming Duan and Jianping He, HiCRISP: A Hierarchical Closed-Loop Robotic Intelligent
-Self-Correction Planner, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2309.12089.pdf)[[CODE]](https://github.com/ming-bot/HiCRISP)
-- Ziyi Chen, Xiaocong Yang, **Jiacheng Lin**, Chenkai Sun, Kevin Chen-Chuan Chang, and Jie Huang, Cascade Speculative Drafting for Even Faster LLM Inference, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2312.11462.pdf)
+
+
 
 
 Journals
@@ -23,6 +22,9 @@ Journals
 
 Conferences
 ========
+- Ziyi Chen, Xiaocong Yang, **Jiacheng Lin**, Chenkai Sun, Kevin Chen-Chuan Chang, and Jie Huang, Cascade Speculative Drafting for Even Faster LLM Inference, NeurIPS, 2024. [[PDF]](https://arxiv.org/pdf/2312.11462.pdf)
+- Chenlin Ming, **Jiacheng Lin**, Pangkit Fong, Han Wang, Xiaoming Duan and Jianping He, HiCRISP: A Hierarchical Closed-Loop Robotic Intelligent
+Self-Correction Planner, CAC, 2024. [[PDF]](https://arxiv.org/pdf/2309.12089.pdf)[[CODE]](https://github.com/ming-bot/HiCRISP)
 - Pengcheng Jiang, **Jiacheng Lin**, Zifeng Wang, Jimeng Sun, and Jiawei Han, GENRES: Rethinking Evaluation for Generative Relation Extraction in the Era of Large Language Models, **_NAACL_**, 2024. [[PDF]](https://arxiv.org/pdf/2402.10744.pdf)
 - **Jiacheng Lin**∗, Meng Xu*, Zhihua Xiong, and Huangang Wang. CAMBranch: Contrastive Learning with Augmented MILPs for Branching, **_ICLR_**, 2024. [[PDF]](https://arxiv.org/pdf/2402.03647.pdf)
 - **Jiacheng Lin**∗, Hanwen Xu∗, Addie Woicik, Jianzhu Ma and Sheng Wang, Pisces: A cross-modal contrastive learning approach to synergistic drug combination prediction, **_RECOMB_**, 2023. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v1)[[CODE]](https://github.com/linjc16/Pisces)
