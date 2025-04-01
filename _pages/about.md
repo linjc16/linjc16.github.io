@@ -16,7 +16,7 @@ My research interests revolve around **AI4Science**, including
 - Multi-modal Learning (text, gene, drug, protein, etc.)
 - Drug Discovery
 
-_I am currently seeking research-oriented internship opportunities for the summer of 2025. Please contact me if you have any recruitment openings._
+_I am currently seeking research-oriented internship opportunities for the summer of 2026. Please contact me if you have any recruitment openings._
 
 News
 ======
