@@ -12,12 +12,7 @@ redirect_from:
 Education
 ======
 * B.S. in [Tsinghua University](https://www.tsinghua.edu.cn/), 2016-2020
-  - Outstanding Graduate of the Department of Automation at Tsinghua University
 * M.S. in [Tsinghua University](https://www.tsinghua.edu.cn/), advised by [Huangang Wang](https://www.au.tsinghua.edu.cn/info/1107/1557.htm), 2020-2023.
-  - Outstanding Graduate of Beijing
-  - Outstanding Graduate of Tsinghua University
-  - Outstanding Graduate of the Department of Automation at Tsinghua University
-  - Outstanding MS Thesis of Tsinghua University
 * Ph.D. in [University of Illinois Urbana-Champaign](https://illinois.edu/), advised by [Jimeng Sun](https://www.sunlab.org/) 2023-Present
 
 Work experience
@@ -28,18 +23,18 @@ Work experience
 
 Honors & Achievements
 ======
-- Intel Fellowship for Graduates of Tsinghua University, 2022
-- Stars of Tomorrow Internship Award of Microsoft Research Asia, 2022
-- Second-Class Comprehensive Scholarship for Graduates of Tsinghua University, 2021
-- Third Prize in the 37th "Challenge Cup" National College Student Curricular Academic Science and Technology Works Competition of Tsinghua University, 2019
-- Third Prize in the 19th Electronic Design Contest of Tsinghua University, 2018
-- Scholarship of Academic Excellence of Tsinghua University, 2017
-- Scholarship of Technological Innovation of Tsinghua University, 2019
-- Scholarship of Outstanding Social Work of Tsinghua University, 2017 & 2019
-- Outstanding Graduate of Beijing in China, 2023
-- Outstanding Graduate of Tsinghua University, 2023
-- Outstanding Graduate of the Department of Automation at Tsinghua University, 2020 & 2023
-- Outstanding MS Thesis of Tsinghua University, 2023
+- Intel Fellowship for Graduates of Tsinghua University
+- Stars of Tomorrow Internship Award of Microsoft Research Asia
+- Second-Class Comprehensive Scholarship for Graduates of Tsinghua University
+- Third Prize in the 37th "Challenge Cup" National College Student Curricular Academic Science and Technology Works Competition of Tsinghua University
+- Third Prize in the 19th Electronic Design Contest of Tsinghua University
+- Scholarship of Academic Excellence of Tsinghua University
+- Scholarship of Technological Innovation of Tsinghua University
+- Scholarship of Outstanding Social Work of Tsinghua University
+- Outstanding Graduate of Beijing in China
+- Outstanding Graduate of Tsinghua University
+- Outstanding Graduate of the Department of Automation at Tsinghua University
+- Outstanding MS Thesis of Tsinghua University
 
 Activities
 ======
