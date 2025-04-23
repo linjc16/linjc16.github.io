@@ -10,7 +10,7 @@ redirect_from:
 
 I am a Computer Science Ph.D. candidate at [University of Illinois Urbana-Champaign](https://illinois.edu/) advised by Prof. [Jimeng Sun](https://www.sunlab.org/). Before that, I earned my B.Eng and MS degree in Automation at [Tsinghua University](https://www.tsinghua.edu.cn/). I am also working closely with Prof. [Sheng Wang](https://homes.cs.washington.edu/~swang/) and Dr. [Lijun Wu](https://apeterswu.github.io/).
 
-My research focuses on foundation models (e.g., large language models, multi-modal models) and reinforcement learning, with applications in healthcare, biomedical science, and recommendation systems. I am particularly interested in how these models can be used for reasoning, retrieval, and decision-making in complex, real-world scenarios.
+My research focuses on **foundation models** (e.g., large language models (LLMs), multi-modal models) and **reinforcement learning** (RL), with applications in healthcare, biomedical science, and recommendation systems. I am particularly interested in how these models can be used for reasoning, retrieval, and decision-making in complex, real-world scenarios.
 - Natural Language Processing (especially in the healthcare domain)
 - Knowledge Graph & Large Language Models
 - Multi-modal Learning (text, gene, drug, protein, etc.)
