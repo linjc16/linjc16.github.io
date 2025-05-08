@@ -12,7 +12,7 @@ Preprint
 - Pengcheng Jiang*, **Jiacheng Lin**∗, Lang Cao, Runchu Tian, SeongKu Kang, Zifeng Wang, Jimeng Sun, Jiawei Han, DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning, preprint, 2025. [[PDF]](https://arxiv.org/pdf/2503.00223)[[CODE]](https://github.com/pat-jj/DeepRetrieval)
 - **Jiacheng Lin**, Kun Qian, Haoyu Han, Nurendra Choudhary, Tianxin Wei, Zhongruo Wang, Sahika Genc, Edward W Huang, Sheng Wang, Karthik Subbian, Danai Koutra, Jimeng Sun, Unleashing the Power of LLMs as Multi-Modal Encoders for Text and Graph-Structured Data, preprint, 2024. [[PDF]](https://arxiv.org/pdf/2410.11235)
 - **Jiacheng Lin**, Hanwen Xu, Zifeng Wang, Sheng Wang, Jimeng Sun, Panacea: A foundation model for clinical trial search, summarization, design, and recruitment, preprint, 2024. [[PDF]](https://www.medrxiv.org/content/medrxiv/early/2024/06/27/2024.06.26.24309548.full.pdf)[[CODE]](https://github.com/linjc16/Panacea)
-- Hanwen Xu*, **Jiacheng Lin**∗, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, preprint, 2023. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
+
 - Kaiyuan Gao, Sunan He, Zhenyu He, **Jiacheng Lin** (_All authors contribute equally_), QiZhi Pei, Jie Shao, Wei Zhang, Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2308.14149.pdf)[[Repo]](https://github.com/GPT-Alternatives/gpt_alternatives)
 
 
@@ -20,6 +20,7 @@ Preprint
 
 Journals
 ========
+- Hanwen Xu*, **Jiacheng Lin**∗, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, **_Cell Genomics_**, 2025. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
 - **Jiacheng Lin**, Lijun Wu, Jinhua Zhu, Xiaobo Liang, Yingce Xia, Shufang Xie, Tao Qin and Tie-Yan Liu, R<sup>2</sup>-DDI: Relation-aware Feature Refinement for Drug-Drug Interaction Prediction, **_Briefings in Bioinformatics_**, Volume 24, Issue 1, 2023. [[PDF]](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbac576/6961471?utm_source=authortollfreelink&utm_campaign=bib&utm_medium=email&guestAccessKey=189b0995-bc41-40fc-b625-bf34b44ff21e&login=true)[[CODE]](https://github.com/linjc16/R2-DDI)
 - **Jiacheng Lin**, Jialin Zhu, Huangang Wang and Tao Zhang, Learning to branch with Tree-aware Branching Transformers, **_Knowledge-Based Systems_**, Volume 252, 2022, 109455, ISSN 0950-7051. [[PDF]](https://www.sciencedirect.com/science/article/pii/S0950705122007298)[[CODE]](https://github.com/linjc16/TBranT)
 
