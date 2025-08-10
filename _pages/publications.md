@@ -9,11 +9,9 @@ author_profile: true
 Preprint
 =======
 - **Jiacheng Lin**, Tian Wang, Kun Qian, Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning, preprint, 2025. [[PDF]](https://arxiv.org/pdf/2503.24289)[[CODE]](https://github.com/linjc16/Rec-R1)
-- Pengcheng Jiang*, **Jiacheng Lin**∗, Lang Cao, Runchu Tian, SeongKu Kang, Zifeng Wang, Jimeng Sun, Jiawei Han, DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning, preprint, 2025. [[PDF]](https://arxiv.org/pdf/2503.00223)[[CODE]](https://github.com/pat-jj/DeepRetrieval)
+
 - **Jiacheng Lin**, Hanwen Xu, Zifeng Wang, Sheng Wang, Jimeng Sun, Panacea: A foundation model for clinical trial search, summarization, design, and recruitment, preprint, 2024. [[PDF]](https://www.medrxiv.org/content/medrxiv/early/2024/06/27/2024.06.26.24309548.full.pdf)[[CODE]](https://github.com/linjc16/Panacea)
 - Kaiyuan Gao, Sunan He, Zhenyu He, **Jiacheng Lin** (_All authors contribute equally_), QiZhi Pei, Jie Shao, Wei Zhang, Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2308.14149.pdf)[[Repo]](https://github.com/GPT-Alternatives/gpt_alternatives)
-
-
 
 
 Journals
@@ -24,6 +22,7 @@ Journals
 
 Conferences
 ========
+- Pengcheng Jiang*, **Jiacheng Lin**∗, Lang Cao, Runchu Tian, SeongKu Kang, Zifeng Wang, Jimeng Sun, Jiawei Han, DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning, **_COLM_**, 2025. [[PDF]](https://arxiv.org/pdf/2503.00223)[[CODE]](https://github.com/pat-jj/DeepRetrieval)
 - Ziyi Chen, Xiaocong Yang, **Jiacheng Lin**, Chenkai Sun, Kevin Chen-Chuan Chang, and Jie Huang, Cascade Speculative Drafting for Even Faster LLM Inference, **_NeurIPS_**, 2024. [[PDF]](https://arxiv.org/pdf/2312.11462.pdf)
 - Chenlin Ming, **Jiacheng Lin**, Pangkit Fong, Han Wang, Xiaoming Duan and Jianping He, HiCRISP: An LLM-Based Hierarchical Closed-Loop Robotic Intelligent Self-Correction Planner, **_CAC_**, 2024. [[PDF]](https://arxiv.org/pdf/2309.12089.pdf)[[CODE]](https://github.com/ming-bot/HiCRISP)
 - Pengcheng Jiang, **Jiacheng Lin**, Zifeng Wang, Jimeng Sun, and Jiawei Han, GENRES: Rethinking Evaluation for Generative Relation Extraction in the Era of Large Language Models, **_NAACL_**, 2024. [[PDF]](https://arxiv.org/pdf/2402.10744.pdf)
