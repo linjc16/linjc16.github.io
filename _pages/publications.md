@@ -8,7 +8,7 @@ author_profile: true
 
 Preprint
 =======
-- **Jiacheng Lin**, Tian Wang, Kun Qian, Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning, preprint, 2025. [[PDF]](https://arxiv.org/pdf/2503.24289)[[CODE]](https://github.com/linjc16/Rec-R1)
+
 
 - **Jiacheng Lin**, Hanwen Xu, Zifeng Wang, Sheng Wang, Jimeng Sun, Panacea: A foundation model for clinical trial search, summarization, design, and recruitment, preprint, 2024. [[PDF]](https://www.medrxiv.org/content/medrxiv/early/2024/06/27/2024.06.26.24309548.full.pdf)[[CODE]](https://github.com/linjc16/Panacea)
 - Kaiyuan Gao, Sunan He, Zhenyu He, **Jiacheng Lin** (_All authors contribute equally_), QiZhi Pei, Jie Shao, Wei Zhang, Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2308.14149.pdf)[[Repo]](https://github.com/GPT-Alternatives/gpt_alternatives)
@@ -16,6 +16,7 @@ Preprint
 
 Journals
 ========
+- **Jiacheng Lin**, Tian Wang, Kun Qian, Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning, **__TMLR__**, 2025. [[PDF]](https://openreview.net/pdf?id=YBRU9MV2vE)[[CODE]](https://github.com/linjc16/Rec-R1)
 - Hanwen Xu*, **Jiacheng Lin**∗, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, **_Cell Genomics_**, 2025. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
 - Xiaoyang Chen, Keyi Li, Xuejian Cui, Zian Wang, Qun Jiang, **Jiacheng Lin**, Zhen Li, Zijing Gao, Rui Jiang, EpiAgent: Foundation model for single-cell epigenomic data, **_Nature Methods_**, 2025. [[PDF]](https://www.biorxiv.org/content/biorxiv/early/2024/12/21/2024.12.19.629312.full.pdf)
 - **Jiacheng Lin**, Lijun Wu, Jinhua Zhu, Xiaobo Liang, Yingce Xia, Shufang Xie, Tao Qin and Tie-Yan Liu, R<sup>2</sup>-DDI: Relation-aware Feature Refinement for Drug-Drug Interaction Prediction, **_Briefings in Bioinformatics_**, Volume 24, Issue 1, 2023. [[PDF]](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbac576/6961471?utm_source=authortollfreelink&utm_campaign=bib&utm_medium=email&guestAccessKey=189b0995-bc41-40fc-b625-bf34b44ff21e&login=true)[[CODE]](https://github.com/linjc16/R2-DDI)
