@@ -17,7 +17,7 @@ Education
 
 Work experience
 ======
-- 2025.8-2025.12: Machine Learning Intern at Keiji AI, advised by Zifeng Wang and Jimeng Sun.
+- 2025.8-2025.12: Machine Learning Research Intern at Keiji AI, advised by Zifeng Wang and Jimeng Sun.
 - 2025.5-2025.8: Applied Scientist Intern at Amazon SFAI, advised by Arvind Srinivasan, Kun Qian, Tian Wang, Weiqi Zhang, [Sujay Sanghavi](https://sites.utexas.edu/sanghavi/), [Changyou Chen](https://cse.buffalo.edu/~changyou/), [Hyokun Yun](https://bikestra.github.io/), and [Lihong Li](https://lihongli.github.io/)
 - 2024.5-2024.8: Applied Scientist Intern at Amazon Search, advised by Kun Qian, Sheng Wang, and Danai Koutra
 - 2022.11-2023.7: Research Intern at [Microsoft Research AI4Science](https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/), advised by [Lijun Wu](https://apeterswu.github.io/) and [Tao Qin](https://www.microsoft.com/en-us/research/people/taoqin/)
