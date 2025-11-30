@@ -9,7 +9,7 @@ author_profile: true
 Preprint
 =======
 
-
+- Jiacheng Lin, Zhongruo Wang, Kun Qian, Tian Wang, Arvind Srinivasan, Hansi Zeng, Ruocheng Jiao, Xie Zhou, Jiri Gesi, Dakuo Wang, Yufan Guo, Kai Zhong, Weiqi Zhang, Sujay Sanghavi, Changyou Chen, Hyokun Yun, Lihong Li, SFT Doesn’t Always Hurt General Capabilities: Revisiting Domain-Specific Fine-Tuning in LLMs, preprint, 2024. [[PDF]](https://arxiv.org/pdf/2509.20758?)
 - **Jiacheng Lin**, Hanwen Xu, Zifeng Wang, Sheng Wang, Jimeng Sun, Panacea: A foundation model for clinical trial search, summarization, design, and recruitment, preprint, 2024. [[PDF]](https://www.medrxiv.org/content/medrxiv/early/2024/06/27/2024.06.26.24309548.full.pdf)[[CODE]](https://github.com/linjc16/Panacea)
 - Kaiyuan Gao, Sunan He, Zhenyu He, **Jiacheng Lin** (_All authors contribute equally_), QiZhi Pei, Jie Shao, Wei Zhang, Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models, preprint, 2023. [[PDF]](https://arxiv.org/pdf/2308.14149.pdf)[[Repo]](https://github.com/GPT-Alternatives/gpt_alternatives)
 
