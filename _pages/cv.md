@@ -29,8 +29,6 @@ Honors & Achievements
 - Intel Fellowship for Graduates of Tsinghua University
 - Stars of Tomorrow Internship Award of Microsoft Research Asia
 - Second-Class Comprehensive Scholarship for Graduates of Tsinghua University
-- Third Prize in the 37th "Challenge Cup" National College Student Curricular Academic Science and Technology Works Competition of Tsinghua University
-- Third Prize in the 19th Electronic Design Contest of Tsinghua University
 - Scholarship of Academic Excellence of Tsinghua University
 - Scholarship of Technological Innovation of Tsinghua University
 - Scholarship of Outstanding Social Work of Tsinghua University
