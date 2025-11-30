@@ -25,7 +25,7 @@ News
 
 09/2025 Our [EpiAgent: Foundation model for single-cell epigenomic data](https://www.nature.com/articles/s41592-025-02822-z) is accepted by *Nature Methods* (IF=32.1). <br>
 
-08/2025 Starting **Machine Learning Internship** at Keiji AI. <br>
+08/2025 Starting **Machine Learning Research Internship** at Keiji AI. <br>
 
 08/2025 Our [s3: You Don't Need That Much Data to Train a Search Agent via RL](https://arxiv.org/pdf/2505.14146) is accepted by *EMNLP 2025*. <br>
 
