@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+Check my resume [here](https://drive.google.com/file/d/1GUmLZRaLOGzy8ungmh640IjWqzjCTB4x/view?usp=sharing) (Last Updated: Dec 2025).
+
 Education
 ======
 * B.S. in [Tsinghua University](https://www.tsinghua.edu.cn/), 2016-2020
