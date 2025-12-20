@@ -21,7 +21,7 @@ _I am currently seeking research-oriented internship opportunities for the summe
 
 News
 ======
-12/2025 Our Survey [Adaptation of Agentic AI](https://github.com/pat-jj/Awesome-Adaptation-of-Agentic-AI/blob/main/paper.pdf) is released! We categorized existing agent papers into four paradigms, which makes the overall research landscape much clearer. <br>
+12/2025 Our Survey [Adaptation of Agentic AI](https://arxiv.org/pdf/2512.16301) is released! We categorized existing agent papers into four paradigms, which makes the overall research landscape much clearer. <br>
 
 10/2025 Our [Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning](https://arxiv.org/pdf/2503.24289) is accepted by *TMLR*. <br>
 
