@@ -14,7 +14,7 @@ My research focuses on **foundation models** (e.g., large language models (LLMs)
 - **LLM-centric Research**: Search Agents ([DeepRetrieval](https://arxiv.org/pdf/2503.00223), [s3](https://arxiv.org/pdf/2505.14146)), Knowledge Graphs ([GenRES](https://arxiv.org/pdf/2402.10744)), LLM Efficiency ([Cascade Speculative Drafting](https://proceedings.neurips.cc/paper_files/paper/2024/file/9cb5b083ba4f5ca6bd05dd307a2fb354-Paper-Conference.pdf)), Revisiting SFT Forgetting ([TALR](https://arxiv.org/pdf/2509.20758?))
 - **LLMs/RL + Healthcare**: EHR Reasoning Model with RL ([EHRMind](https://arxiv.org/pdf/2505.24105)), Clinical Trial Foundation Model ([Panacea](https://arxiv.org/abs/2407.11007), [TrialPanorama](https://arxiv.org/pdf/2505.16097))
 - **BioMedical Foundation Models**: Molecule Foundation Model ([Pisces](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf), [R<sup>2</sup>-DDI](https://academic.oup.com/bib/article/24/1/bbac576/6961471)), Single-cell Foundation Model ([EpiAgent](https://www.biorxiv.org/content/biorxiv/early/2024/12/21/2024.12.19.629312.full.pdf))
-- **LLMs/RL + Recommendation**: Bridge RecSys with LLMs using RL ([Rec-R1](https://arxiv.org/pdf/2503.24289))
+- **LLMs/RL + Recommendation**: Bridge RecSys with LLMs using RL ([Rec-R1](https://arxiv.org/pdf/2503.24289), [Shop-R1](https://arxiv.org/pdf/2507.17842))
 
 
 _I am currently seeking research-oriented internship opportunities for the summer of 2026. Please contact me if you have any recruitment openings._
