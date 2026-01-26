@@ -51,6 +51,7 @@ News
 
 Selected Papers
 ======
+- **Jiacheng Lin**, Zhongruo Wang, Kun Qian, Tian Wang, Arvind Srinivasan, Hansi Zeng, Ruocheng Jiao, Xie Zhou, Jiri Gesi, Dakuo Wang, Yufan Guo, Kai Zhong, Weiqi Zhang, Sujay Sanghavi, Changyou Chen, Hyokun Yun, Lihong Li, SFT Doesn’t Always Hurt General Capabilities: Revisiting Domain-Specific Fine-Tuning in LLMs, **_ICLR_**, 2026. [[PDF]](https://arxiv.org/pdf/2509.20758?)
 - **Jiacheng Lin**, Tian Wang, Kun Qian, Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning, **_TMLR_**, 2025. [[PDF]](https://arxiv.org/pdf/2503.24289)[[CODE]](https://github.com/linjc16/Rec-R1)
 - Pengcheng Jiang*, **Jiacheng Lin**∗, Lang Cao, Runchu Tian, SeongKu Kang, Zifeng Wang, Jimeng Sun, Jiawei Han, DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning, **_COLM_**, 2025. [[PDF]](https://arxiv.org/pdf/2503.00223)[[CODE]](https://github.com/pat-jj/DeepRetrieval)
 - Hanwen Xu*, **Jiacheng Lin**∗, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang, Pisces: A multi-modal data augmentation approach for drug combination synergy prediction, **_Cell Genomics_**, 2025. [[PDF]](https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf)[[CODE]](https://github.com/HanwenXuTHU/Pisces)
