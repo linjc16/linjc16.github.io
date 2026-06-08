@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Check my resume [here](https://linjc16.github.io/files/CV_JiachengLin.pdf) (Last Updated: Jan 2026).
+Check my resume [here](https://linjc16.github.io/files/CV_JiachengLin.pdf) (Last Updated: June 2026).
 
 Education
 ======
@@ -19,6 +19,7 @@ Education
 
 Work experience
 ======
+- 2026.4-Present: AI Research Intern, working with Dr. [Beibin Li](https://www.beibinli.com/), [Simon Du](https://simonshaoleidu.com/), and [Sheng Wang](https://homes.cs.washington.edu/~swang/)
 - 2025.8-2025.12: Machine Learning Research Intern at Keiji AI, advised by Zifeng Wang and Jimeng Sun.
 - 2025.5-2025.8: Applied Scientist Intern at Amazon SFAI, advised by Arvind Srinivasan, Kun Qian, Tian Wang, Weiqi Zhang, [Sujay Sanghavi](https://sites.utexas.edu/sanghavi/), [Changyou Chen](https://cse.buffalo.edu/~changyou/), [Hyokun Yun](https://bikestra.github.io/), and [Lihong Li](https://lihongli.github.io/)
 - 2024.5-2024.8: Applied Scientist Intern at Amazon Search, advised by Kun Qian, Sheng Wang, and Danai Koutra
