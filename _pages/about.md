@@ -21,7 +21,7 @@ _I am currently seeking research-oriented internship opportunities for the summe
 
 News
 ======
-06/2026 One paper [Benchmarking and Developing Large Language Models Using One Million Clinical Trials (TrialPanorama)] is accepted by npj Digital Medicine. <br>
+06/2026 One paper [Benchmarking and Developing Large Language Models Using One Million Clinical Trials (TrialPanorama)](https://arxiv.org/pdf/2505.16097?) is accepted by npj Digital Medicine. <br>
 
 04/2026 Starting **AI Research Scientist Intern** at Apodex, a frontier AI lab building general-purpose reasoning systems and research agents, working with [Beibin Li](https://www.beibinli.com/), [Simon Du](https://simonshaoleidu.com/), and [Sheng Wang](https://homes.cs.washington.edu/~swang/). <br>
 
