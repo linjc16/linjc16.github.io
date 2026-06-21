@@ -21,7 +21,13 @@ _I am currently seeking research-oriented internship opportunities for the summe
 
 News
 ======
-01/2026 Two papers [SFT Doesn't Always Hurt General Capabilities: Revisiting Domain-Specific Fine-Tuning in LLMs](https://arxiv.org/pdf/2509.20758?) and [Shop-R1](https://arxiv.org/pdf/2507.17842) are accepted by ICLR 2026. 
+06/2026 One paper [Benchmarking and Developing Large Language Models Using One Million Clinical Trials (TrialPanorama)] is accepted by npj Digital Medicine. <br>
+
+04/2026 Starting **AI Research Scientist Intern** at Apodex, a frontier AI lab building general-purpose reasoning systems and research agents, working with [Beibin Li](https://www.beibinli.com/), [Simon Du](https://simonshaoleidu.com/), and [Sheng Wang](https://homes.cs.washington.edu/~swang/). <br>
+
+02/2026 One paper [DiffKGW: Stealthy and Robust Diffusion Model Watermarking](https://openreview.net/pdf?id=OXi9vcIOgD) is accepted by TMLR. <br>
+
+01/2026 Two papers [SFT Doesn't Always Hurt General Capabilities: Revisiting Domain-Specific Fine-Tuning in LLMs](https://arxiv.org/pdf/2509.20758?) and [Shop-R1](https://arxiv.org/pdf/2507.17842) are accepted by ICLR 2026. <br>
 
 12/2025 Our Survey [Adaptation of Agentic AI](https://arxiv.org/pdf/2512.16301) is released! We categorized existing agent papers into four paradigms, which makes the overall research landscape much clearer. <br>
 
