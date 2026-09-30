@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrialPD-Bench</title>
+  <meta name="description" content="TrialPD-Bench evaluates coding agents on clinical trial protocol digitization from complete protocol PDFs, and TrialScribe adds task skills and a verification loop.">
+  <meta name="keywords" content="clinical trial protocol, protocol digitization, coding agents, benchmark, USDM, schedule of activities, eligibility criteria">
+  <meta name="author" content="Jiacheng Lin, Geoff Low, Nishit Agarwal, Rahul Jain, Ian Fleming, Afrah Shafquat, Mandis Beigi, Jimeng Sun">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?">
+  <meta property="og:description" content="TrialPD-Bench: 150 protocol PDFs, four task categories, ten models in five coding-agent harnesses.">
+  <meta property="og:image" content="static/images/benchmark_overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_title" content="Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?">
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <style>
+    /* Page-specific additions on top of the template's index.css. */
+    .figure-block { margin-top: 1.5rem; }
+    .figure-block img { width: 100%; height: auto; border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; padding: 10px; }
+    .figure-caption { color: #64748b; font-size: 0.95rem; margin-top: 0.6rem; text-align: center; }
+    .stat-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
+    .stat-chip { border: 1px solid #e2e8f0; border-radius: 999px; padding: 0.35rem 0.9rem; font-size: 0.95rem; color: #334155; background: #fff; }
+    .stat-chip b { color: #0f172a; font-variant-numeric: tabular-nums; }
+    .findings { text-align: left; }
+    .findings li { margin-bottom: 0.6rem; }
+    .results-carousel .item img { width: 100%; height: auto; background: #fff; }
+    .results-carousel .item { padding: 0 0.5rem; }
+    .table-container { border: 1px solid #e2e8f0; border-radius: 12px; }
+    .tasks-table { font-size: 0.95rem; }
+    .tasks-table td.num, .tasks-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .example-diff { display: inline-flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1rem; margin-top: 0.5rem; }
+    .example-diff .ok { background: #ecfdf5; color: #047857; padding: 0.15rem 0.5rem; border-radius: 6px; }
+    .example-diff .bad { background: #fef2f2; color: #b91c1c; padding: 0.15rem 0.5rem; border-radius: 6px; }
+    .gain-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 1.25rem 0; }
+    .gain { border: 1px solid #e2e8f0; border-radius: 12px; padding: 0.6rem 1rem; min-width: 8.5rem; text-align: center; background: #fff; }
+    .gain .d { display: block; font-size: 1.5rem; font-weight: 700; color: #0a6675; font-variant-numeric: tabular-nums; }
+    .gain .m { font-size: 0.85rem; color: #64748b; }
+    /* Tasks section */
+    .task-intro { color: #64748b; max-width: 46rem; margin: 0 auto 1.25rem; }
+    .task-tabs ul { flex-wrap: wrap; }
+    .task-tabs a { white-space: nowrap; }
+    .task-what { margin-bottom: 1rem; }
+    .io-label { font-size: 0.85rem; color: #64748b; margin-bottom: 0.4rem; }
+    .io-label .tag { margin-right: 0.35rem; font-weight: 600; }
+    .io-box { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; height: 22rem; overflow: auto; }
+    .io-output { height: calc(22rem + 7.4rem); }
+    .io-input { display: flex; align-items: flex-start; justify-content: center; padding: 8px; }
+    .io-input img { width: 100%; height: auto; }
+    .io-output pre { margin: 0; background: #f8fafc; font-size: 0.78rem; line-height: 1.5; white-space: pre-wrap; word-break: break-word; border-radius: 0; padding: 0.9rem 1rem; }
+    .io-output .elide { color: #94a3b8; font-style: italic; }
+    .soa-render { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; overflow-x: auto; }
+    .soa-render table { border-collapse: collapse; font-size: 0.72rem; }
+    .soa-render th, .soa-render td { border: 1px solid #cbd5e1; padding: 2px 6px; text-align: center; white-space: nowrap; }
+    .task-intro b { color: #0f172a; }
+    .pdf-doc { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; padding: 0.7rem 0.85rem; margin-bottom: 0.6rem; }
+    .pdf-head { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: #0f172a; }
+    .pdf-head .icon { color: #b91c1c; }
+    .pdf-head .pdf-n { margin-left: auto; font-variant-numeric: tabular-nums; color: #475569; font-weight: 600; }
+    .pdf-strip { position: relative; height: 22px; margin-top: 0.5rem; border-radius: 3px;
+      background: repeating-linear-gradient(90deg, #e2e8f0 0 1px, #f1f5f9 1px 4px); border: 1px solid #cbd5e1; }
+    .pdf-strip .pg { position: absolute; top: -3px; bottom: -3px; min-width: 3px; border-radius: 1px; }
+    .pdf-strip .pg.hit { background: #0a6675; }
+    .pdf-strip .pg.distract { background: #cbd5e1; top: 2px; bottom: 2px; }
+    .pdf-scale { display: flex; justify-content: space-between; font-size: 0.7rem; color: #94a3b8; margin-top: 0.15rem; font-variant-numeric: tabular-nums; }
+    .pdf-legend { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: 0.78rem; color: #475569; margin-top: 0.3rem; }
+    .pdf-legend .lg { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .pdf-legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+    .pdf-legend .sw.hit { background: #0a6675; }
+    .pdf-legend .sw.distract { background: #cbd5e1; }
+    .strip-note { font-size: 0.78rem; color: #475569; margin-top: 0.35rem; }
+    .io-input { position: relative; }
+    .page-badge { position: absolute; top: 8px; left: 8px; background: rgba(15,23,42,0.8); color: #fff; font-size: 0.72rem; padding: 0.1rem 0.5rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+    .task-meta { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
+    @media (max-width: 768px) { .io-box { height: 20rem; } }
+    /* end tasks */
+  </style>
+</head>
+<body>
+
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Wrap names in <a href="..."> to link personal pages. -->
+              <span class="author-block">Jiacheng Lin<sup>1</sup>,</span>
+              <span class="author-block">Geoff Low<sup>2</sup>,</span>
+              <span class="author-block">Nishit Agarwal<sup>2</sup>,</span>
+              <span class="author-block">Rahul Jain<sup>2</sup>,</span>
+              <span class="author-block">Ian Fleming<sup>2</sup>,</span>
+              <span class="author-block">Afrah Shafquat<sup>2</sup>,</span>
+              <span class="author-block">Mandis Beigi<sup>2</sup>,</span>
+              <span class="author-block">Jimeng Sun<sup>1</sup></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign</span>
+              <span class="author-block"><sup>2</sup>Medidata Solutions</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- TODO: Replace # with the paper PDF link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- TODO: Replace # with the GitHub repository. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- TODO: Replace # with the benchmark data release. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Benchmark</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser figure -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/benchmark_overview.png" alt="Overview of TrialPD-Bench: source documents and the four task categories, therapeutic-area coverage, document-length distribution, and study counts across sponsors." style="width:100%;height:auto">
+        <h2 class="subtitle has-text-centered">
+          <b>TrialPD-Bench</b> evaluates protocol digitization on 150 complete protocol PDFs from 106 sponsors and 18 therapeutic areas, with a median length of 122 pages.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- Tasks: input and output for each task. Generated by build_tasks.py from the benchmark reference files. -->
+  <section class="section" id="tasks">
+    <div class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Tasks</h2>
+        <p class="task-intro"><b>The input to every task is the entire protocol PDF</b>, not a pre-selected excerpt. Protocols in TrialPD-Bench run to a median of 122 pages and up to 368, and finding the few pages that hold the answer is part of the task. Each example below marks where the answer sits in the PDF, shows that page, and gives the reference output; long outputs are shortened for display.</p>
+      </div>
+      <div class="tabs is-toggle is-centered is-small task-tabs">
+        <ul role="tablist" aria-label="Tasks">
+          <li class="is-active"><a role="tab" id="task-tab-indication" aria-controls="task-indication" aria-selected="true" tabindex="0" href="#task-indication" data-task="indication"><span class="icon is-small"><i class="fas fa-stethoscope" aria-hidden="true"></i></span><span>Indication</span></a></li><li class=""><a role="tab" id="task-tab-criteria" aria-controls="task-criteria" aria-selected="false" tabindex="-1" href="#task-criteria" data-task="criteria"><span class="icon is-small"><i class="fas fa-tasks" aria-hidden="true"></i></span><span>Eligibility criteria</span></a></li><li class=""><a role="tab" id="task-tab-objectives" aria-controls="task-objectives" aria-selected="false" tabindex="-1" href="#task-objectives" data-task="objectives"><span class="icon is-small"><i class="fas fa-bullseye" aria-hidden="true"></i></span><span>Objectives &amp; endpoints</span></a></li><li class=""><a role="tab" id="task-tab-soa" aria-controls="task-soa" aria-selected="false" tabindex="-1" href="#task-soa" data-task="soa"><span class="icon is-small"><i class="fas fa-th" aria-hidden="true"></i></span><span>Schedule of Activities</span></a></li><li class=""><a role="tab" id="task-tab-timeline" aria-controls="task-timeline" aria-selected="false" tabindex="-1" href="#task-timeline" data-task="timeline"><span class="icon is-small"><i class="fas fa-stream" aria-hidden="true"></i></span><span>Structured timeline</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="task-panel" role="tabpanel" id="task-indication" aria-labelledby="task-tab-indication">
+        <p class="task-what">Find the disease or condition the study investigates and return it in the protocol's own wording, keeping qualifiers such as severity or stage.</p>
+        <div class="columns task-io">
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-light">Input</span> the entire protocol PDF</p>
+            <div class="pdf-doc">
+              <div class="pdf-head"><span class="icon"><i class="fas fa-file-pdf"></i></span><b>Protocol PDF</b><span class="pdf-n">74 pages</span></div>
+              <div class="pdf-strip" role="img" aria-label="74-page PDF; the answer is on page 1, 9"><span class="pg distract" style="left:12.162%;width:1.351%"></span><span class="pg distract" style="left:20.270%;width:1.351%"></span><span class="pg distract" style="left:24.324%;width:1.351%"></span><span class="pg distract" style="left:27.027%;width:1.351%"></span><span class="pg distract" style="left:29.730%;width:1.351%"></span><span class="pg distract" style="left:91.892%;width:1.351%"></span><span class="pg distract" style="left:93.243%;width:1.351%"></span><span class="pg distract" style="left:97.297%;width:1.351%"></span><span class="pg distract" style="left:98.649%;width:1.351%"></span><span class="pg hit" style="left:0.000%;width:1.351%"></span><span class="pg hit" style="left:10.811%;width:1.351%"></span></div>
+              <div class="pdf-scale"><span>p. 1</span><span>p. 74</span></div>
+              <div class="pdf-legend"><span class="lg"><i class="sw hit"></i>answer on pages 1, 9</span><span class="lg"><i class="sw distract"></i>similar text on pages 10, 16, 19, 21, 23, 69&ndash;70, 73&ndash;74 (objectives, background, amendment history, references)</span></div><p class="strip-note">Official CDISC USDM example study (Alexion, ALXN1840-WD-204). The protocol says &ldquo;Participants with Wilson Disease&rdquo;; the output keeps the disease and drops the population wording.</p>
+            </div>
+            <div class="io-box io-input"><span class="page-badge">page 1 of 74</span><img src="static/images/tasks/alexion_p1.jpg" alt="Page 1 of the protocol PDF"></div>
+          </div>
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-dark">Output</span> <code>indications.json</code> &middot; reference annotation</p>
+            <div class="io-box io-output"><pre><code>{
+  &quot;descriptions&quot;: [
+    &quot;Wilson disease&quot;
+  ]
+}</code></pre></div>
+          </div>
+        </div>
+        <p class="task-meta"><b>Evaluation:</b> Indication F1 &middot; <b>Test set:</b> 40 protocols</p>
+      </div>
+      <div class="task-panel" role="tabpanel" id="task-criteria" aria-labelledby="task-tab-criteria" hidden>
+        <p class="task-what">Locate the detailed eligibility section and transcribe every numbered inclusion and exclusion criterion verbatim, one item per criterion, with sub-points kept inside it as HTML.</p>
+        <div class="columns task-io">
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-light">Input</span> the entire protocol PDF</p>
+            <div class="pdf-doc">
+              <div class="pdf-head"><span class="icon"><i class="fas fa-file-pdf"></i></span><b>Protocol PDF</b><span class="pdf-n">127 pages</span></div>
+              <div class="pdf-strip" role="img" aria-label="127-page PDF; the answer is on page 35 to 37"><span class="pg distract" style="left:14.961%;width:0.787%"></span><span class="pg hit" style="left:26.772%;width:0.787%"></span><span class="pg hit" style="left:27.559%;width:0.787%"></span><span class="pg hit" style="left:28.346%;width:0.787%"></span></div>
+              <div class="pdf-scale"><span>p. 1</span><span>p. 127</span></div>
+              <div class="pdf-legend"><span class="lg"><i class="sw hit"></i>answer on pages 35&ndash;37</span><span class="lg"><i class="sw distract"></i>similar text on page 20 (table of contents)</span></div>
+            </div>
+            <div class="io-box io-input"><span class="page-badge">page 35 of 127</span><img src="static/images/tasks/p35.jpg" alt="Page 35 of the protocol PDF"></div>
+          </div>
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-dark">Output</span> <code>criteria.json</code> &middot; reference annotation</p>
+            <div class="io-box io-output"><pre><code>{
+  &quot;criteria&quot;: [
+    {
+      &quot;category&quot;: &quot;Inclusion&quot;,
+      &quot;name&quot;: &quot;IN01&quot;,
+      &quot;text&quot;: &quot;&lt;p&gt;Subjects previously participated in Study A3921096 who either:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;completed 52-week maintenance treatment in Study A3921096, or&lt;/p&gt;&lt;/l…&quot;
+    },
+    {
+      &quot;category&quot;: &quot;Inclusion&quot;,
+      &quot;name&quot;: &quot;IN04&quot;,
+      &quot;text&quot;: &quot;&lt;p&gt;Women of childbearing potential must have a negative pregnancy test prior to study enrollment.&lt;/p&gt;&quot;
+    },
+    {
+      &quot;category&quot;: &quot;Exclusion&quot;,
+      &quot;name&quot;: &quot;EX02&quot;,
+      &quot;text&quot;: &quot;&lt;p&gt;Presence of indeterminate colitis, microscopic colitis, ischemic colitis, infectious colitis, or clinical findings suggestive of Crohn’s disease.&lt;/p&gt;&quot;
+    }
+    <span class="elide">// … 15 more criteria (6 inclusion, 12 exclusion in total)</span>
+  ]
+}</code></pre></div>
+          </div>
+        </div>
+        <p class="task-meta"><b>Evaluation:</b> Criterion F1 (exact match after normalization) &middot; <b>Test set:</b> 134 protocols</p>
+      </div>
+      <div class="task-panel" role="tabpanel" id="task-objectives" aria-labelledby="task-tab-objectives" hidden>
+        <p class="task-what">Extract every objective with its level and attach the endpoints that measure it. An endpoint's level is read from its own heading, so it can differ from its objective's level.</p>
+        <div class="columns task-io">
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-light">Input</span> the entire protocol PDF</p>
+            <div class="pdf-doc">
+              <div class="pdf-head"><span class="icon"><i class="fas fa-file-pdf"></i></span><b>Protocol PDF</b><span class="pdf-n">127 pages</span></div>
+              <div class="pdf-strip" role="img" aria-label="127-page PDF; the answer is on page 29 to 30"><span class="pg distract" style="left:4.724%;width:0.787%"></span><span class="pg distract" style="left:14.961%;width:0.787%"></span><span class="pg hit" style="left:22.047%;width:0.787%"></span><span class="pg hit" style="left:22.835%;width:0.787%"></span></div>
+              <div class="pdf-scale"><span>p. 1</span><span>p. 127</span></div>
+              <div class="pdf-legend"><span class="lg"><i class="sw hit"></i>answer on pages 29&ndash;30</span><span class="lg"><i class="sw distract"></i>similar text on pages 7, 20 (protocol summary and table of contents)</span></div>
+            </div>
+            <div class="io-box io-input"><span class="page-badge">page 29 of 127</span><img src="static/images/tasks/p29.jpg" alt="Page 29 of the protocol PDF"></div>
+          </div>
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-dark">Output</span> <code>objectives.json</code> &middot; reference annotation</p>
+            <div class="io-box io-output"><pre><code>{
+  &quot;objectives&quot;: [
+    {
+      &quot;objectiveId&quot;: &quot;OBJ1&quot;,
+      &quot;objectiveLevel&quot;: &quot;PRIMARY&quot;,
+      &quot;levelVerbatim&quot;: &quot;Primary&quot;,
+      &quot;objectiveText&quot;: &quot;To assess the safety and tolerability of long-term tofacitinib therapy in subjects with UC.&quot;,
+      &quot;endpoints&quot;: [
+        {
+          &quot;endpointId&quot;: &quot;END1&quot;,
+          &quot;endpointLevel&quot;: &quot;SECONDARY&quot;,
+          &quot;endpointText&quot;: &quot;Incidence and severity of adverse events (AEs).&quot;
+        },
+        {
+          &quot;endpointId&quot;: &quot;END2&quot;,
+          &quot;endpointLevel&quot;: &quot;SECONDARY&quot;,
+          &quot;endpointText&quot;: &quot;Incidence of serious infections.&quot;
+        }
+      ]
+    },
+    {
+      &quot;objectiveId&quot;: &quot;OBJ2&quot;,
+      &quot;objectiveLevel&quot;: &quot;SECONDARY&quot;,
+      &quot;levelVerbatim&quot;: &quot;Secondary&quot;,
+      &quot;objectiveText&quot;: &quot;To evaluate the efficacy of long-term tofacitinib therapy in subjects with UC.&quot;,
+      &quot;endpoints&quot;: [
+        {
+          &quot;endpointId&quot;: &quot;END9&quot;,
+          &quot;endpointLevel&quot;: &quot;SECONDARY&quot;,
+          &quot;endpointText&quot;: &quot;The proportion of subjects in remission at Month 2, Month 12, Month 24 and Month 36.  Remission in this study is defined as a Mayo score ≤2 with no individual subscore &gt;1, and rectal bleeding subscore of 0.&quot;
+        }
+      ]
+    }
+    <span class="elide">// … 3 objectives and 13 endpoints in total</span>
+  ]
+}</code></pre></div>
+          </div>
+        </div>
+        <p class="task-meta"><b>Evaluation:</b> Objective, endpoint, and objective-linked endpoint F1 &middot; <b>Test set:</b> 89 protocols</p>
+      </div>
+      <div class="task-panel" role="tabpanel" id="task-soa" aria-labelledby="task-tab-soa" hidden>
+        <p class="task-what">Transcribe the SoA table into HTML, resolving merged cells and multi-level visit headers and keeping footnote markers as superscripts. At the document level, the agent must first find the SoA pages.</p>
+        <div class="columns task-io">
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-light">Input</span> the entire protocol PDF</p>
+            <div class="pdf-doc">
+              <div class="pdf-head"><span class="icon"><i class="fas fa-file-pdf"></i></span><b>Protocol PDF</b><span class="pdf-n">127 pages</span></div>
+              <div class="pdf-strip" role="img" aria-label="127-page PDF; the answer is on page 11 to 12, 14, 16 to 18"><span class="pg hit" style="left:7.874%;width:0.787%"></span><span class="pg hit" style="left:8.661%;width:0.787%"></span><span class="pg hit" style="left:10.236%;width:0.787%"></span><span class="pg hit" style="left:11.811%;width:0.787%"></span><span class="pg hit" style="left:12.598%;width:0.787%"></span><span class="pg hit" style="left:13.386%;width:0.787%"></span></div>
+              <div class="pdf-scale"><span>p. 1</span><span>p. 127</span></div>
+              <div class="pdf-legend"><span class="lg"><i class="sw hit"></i>answer on pages 11&ndash;12, 14, 16&ndash;18</span></div><p class="strip-note">The document-level track gives the whole PDF, and the agent must find all six SoA pages. The page-level track gives one of these pages at a time.</p>
+            </div>
+            <div class="io-box io-input"><span class="page-badge">page 11 of 127</span><img src="static/images/tasks/p11.jpg" alt="Page 11 of the protocol PDF"></div>
+          </div>
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-dark">Output</span> <code>p11.html</code> &middot; reference annotation</p>
+            <div class="io-box io-output"><div class="soa-render"><table><tr><th rowspan="2">Study Procedure</th><th>Baseline<br></th><th colspan="6">Open Label Treatment Period</th></tr><tr><td>Day 1<sup>1</sup></td><td>Month 1<br>(± 5 days)</td><td>Month 2<br>(± 5 days)</td><td>Month 4<br>(± 5 days)</td><td>Month 6<br>(± 5 days)</td><td>Month 9<br>(± 5 days)</td><td>Month 12<br>(± 5 days) / ET<sup>2</sup></td></tr><tr><td><strong>Visit Number</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7 or ET<sup>2</sup></td></tr><tr><td>Informed Consent</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Medical History<sup>3</sup></td><td>IND or MNT<sup>1</sup></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div><pre><code>&lt;table&gt;
+&lt;tr&gt;&lt;th rowspan=&quot;2&quot;&gt;Study Procedure&lt;/th&gt;&lt;th&gt;Baseline&lt;br&gt;&lt;/th&gt;&lt;th colspan=&quot;6&quot;&gt;Open Label Treatment Period&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Day 1&lt;sup&gt;1&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;Month 1&lt;br&gt;(± 5 days)&lt;/td&gt;&lt;td&gt;Month 2&lt;br&gt;(± 5 days)&lt;/td&gt;&lt;td&gt;Month 4&lt;br&gt;(± 5 days)&lt;/td&gt;&lt;td&gt;Month 6&lt;br&gt;(± 5 days)&lt;/td&gt;&lt;td&gt;Month 9&lt;br&gt;(± 5 days)&lt;/td&gt;&lt;td&gt;Month 12&lt;br&gt;(± 5 days) / ET&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Visit Number&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;7 or ET&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Informed Consent&lt;/td&gt;&lt;td&gt;X&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Medical History&lt;sup&gt;3&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;IND or MNT&lt;sup&gt;1&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+<span class="elide">&lt;!-- … 11 more rows --&gt;</span>
+&lt;/table&gt;</code></pre></div>
+          </div>
+        </div>
+        <p class="task-meta"><b>Evaluation:</b> Activity&ndash;Visit F1, Sub/sup F1, page recall &middot; <b>Test set:</b> 86 pages; 37 protocols</p>
+      </div>
+      <div class="task-panel" role="tabpanel" id="task-timeline" aria-labelledby="task-tab-timeline" hidden>
+        <p class="task-what">Recover the study's epochs in order, its encounters with USDM type, environmental setting, and contact modes, and its activities.</p>
+        <div class="columns task-io">
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-light">Input</span> the entire protocol PDF</p>
+            <div class="pdf-doc">
+              <div class="pdf-head"><span class="icon"><i class="fas fa-file-pdf"></i></span><b>Protocol PDF</b><span class="pdf-n">97 pages</span></div>
+              <div class="pdf-strip" role="img" aria-label="97-page PDF; the answer is on page 52 to 54"><span class="pg hit" style="left:52.577%;width:1.031%"></span><span class="pg hit" style="left:53.608%;width:1.031%"></span><span class="pg hit" style="left:54.639%;width:1.031%"></span></div>
+              <div class="pdf-scale"><span>p. 1</span><span>p. 97</span></div>
+              <div class="pdf-legend"><span class="lg"><i class="sw hit"></i>answer on pages 52&ndash;54</span></div>
+            </div>
+            <div class="io-box io-input"><span class="page-badge">page 53 of 97</span><img src="static/images/tasks/cdisc53.jpg" alt="Page 53 of the protocol PDF"></div>
+          </div>
+          <div class="column is-half">
+            <p class="io-label"><span class="tag is-dark">Output</span> <code>timeline.json</code> &middot; reference annotation</p>
+            <div class="io-box io-output"><pre><code>{
+  &quot;studyDesignEpochs&quot;: [
+    {
+      &quot;type&quot;: &quot;SCREENING&quot;
+    },
+    {
+      &quot;type&quot;: &quot;TREATMENT&quot;
+    },
+    {
+      &quot;type&quot;: &quot;TREATMENT&quot;
+    },
+    {
+      &quot;type&quot;: &quot;TREATMENT&quot;
+    },
+    {
+      &quot;type&quot;: &quot;FOLLOW-UP&quot;
+    }
+  ],
+  &quot;studyDesignEncounters&quot;: [
+    {
+      &quot;label&quot;: &quot;Screening 1&quot;,
+      &quot;description&quot;: &quot;Screening encounter&quot;,
+      &quot;type&quot;: &quot;Visit&quot;,
+      &quot;environmentalSetting&quot;: &quot;CLINIC&quot;,
+      &quot;contactModes&quot;: &quot;In Person&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Screening 2&quot;,
+      &quot;description&quot;: &quot;Screening encounter - Ambulatory ECG Placement&quot;,
+      &quot;type&quot;: &quot;Visit&quot;,
+      &quot;environmentalSetting&quot;: &quot;CLINIC&quot;,
+      &quot;contactModes&quot;: &quot;In Person&quot;
+    }
+  ],
+  &quot;studyDesignActivities&quot;: [
+    {
+      &quot;label&quot;: &quot;Informed consent&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Inclusion and exclusion criteria&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Patient number assigned&quot;
+    }
+    <span class="elide">// … 36 activities in total</span>
+  ]
+}</code></pre></div>
+          </div>
+        </div>
+        <p class="task-meta"><b>Evaluation:</b> Epoch accuracy, activity and encounter recall &middot; <b>Test set:</b> 3 official CDISC example protocols</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Clinical trial protocol digitization converts protocol documents into structured, machine-readable study definitions that downstream trial systems can reuse. Existing LLM-based systems rely on predefined workflows, which may adapt poorly to the varied structure of complete protocols, whereas coding agents can choose tools and revise their processing strategy as they work. We investigate whether coding agents can reliably digitize clinical trial protocols. We introduce <b>TrialPD-Bench</b>, an expert-annotated benchmark of 150 protocol PDFs spanning four task categories: study identification, eligibility criteria, objectives and endpoints, and study schedule. Evaluating ten proprietary and open-weight models across five coding-agent harnesses, we find that coding agents substantially outperform a predefined retrieval-augmented generation pipeline and specialist OCR models, but their gains depend on the underlying model, and even the strongest agents leave substantial errors. We further develop <b>TrialScribe</b>, a domain-specific harness that equips coding agents with task skills and a verification loop. TrialScribe improves a locally served open-weight model by 9.2&ndash;22.2 points across tasks, enabling it to surpass GPT-5.6-Sol on endpoint extraction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benchmark -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">TrialPD-Bench</h2>
+          <div class="content has-text-justified">
+            <p>
+              Every task starts from a complete protocol PDF from ClinicalTrials.gov, so locating the relevant section is part of the task. Sponsors organize protocols differently: a Schedule of Activities (SoA) table may appear near the beginning or in an appendix, with its own arrangement of study periods, visit windows, multi-level headers, and footnotes. Six experts in the clinical trial domain produced the reference annotations, and output schemas follow the CDISC Unified Study Definitions Model (USDM).
+            </p>
+          </div>
+          <div class="stat-row">
+            <span class="stat-chip"><b>150</b> protocol PDFs</span>
+            <span class="stat-chip"><b>17,471</b> pages</span>
+            <span class="stat-chip"><b>106</b> sponsors</span>
+            <span class="stat-chip"><b>18</b> therapeutic areas</span>
+            <span class="stat-chip"><b>10</b> models &times; <b>5</b> agent harnesses</span>
+          </div>
+        </div>
+      </div>
+      <div class="table-container" style="margin-top:1.75rem">
+        <table class="table is-fullwidth is-hoverable tasks-table">
+          <thead>
+            <tr><th>Task</th><th>Input</th><th class="num">Samples</th><th>Reference annotations</th><th>Main metrics</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Indication</td><td>Protocol PDF</td><td class="num">40</td><td>41 indication descriptions</td><td>Indication F1</td></tr>
+            <tr><td>Eligibility criteria</td><td>Protocol PDF</td><td class="num">134</td><td>3,974 criteria (1,337 inclusion, 2,637 exclusion)</td><td>Criterion F1</td></tr>
+            <tr><td>Objectives and endpoints</td><td>Protocol PDF</td><td class="num">89</td><td>665 objectives, 1,484 endpoints</td><td>Objective, endpoint, objective-linked endpoint F1</td></tr>
+            <tr><td>SoA table, page level</td><td>Single SoA page</td><td class="num">86</td><td>86 tables, 5,001 activity&ndash;visit pairs</td><td>Activity&ndash;Visit F1, Sub/sup F1</td></tr>
+            <tr><td>SoA table, document level</td><td>Protocol PDF</td><td class="num">37</td><td>70 tables</td><td>Page recall, Activity&ndash;Visit F1</td></tr>
+            <tr><td>Structured timeline</td><td>Protocol PDF</td><td class="num">3</td><td>14 epochs, 69 encounters, 115 activities</td><td>Epoch accuracy, activity and encounter recall</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main results -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Main Results</h2>
+          <div class="content findings">
+            <ul>
+              <li><b>Coding agents substantially outperform a RAG pipeline.</b> With the same model, agents improve criterion F1 by 14.3&ndash;55.9 points and endpoint F1 by 4.7&ndash;28.9 points for nine of ten models. On SoA tables the six strongest agents reach 74.7&ndash;86.8 Activity&ndash;Visit F1, against 19.8&ndash;51.5 for RAG.</li>
+              <li><b>Coding agents outperform specialist OCR and document-understanding models on SoA tables.</b> The six strongest agents reach 84.3&ndash;90.0 page-level Activity&ndash;Visit F1; the best specialist baseline, Mistral OCR, reaches 71.7.</li>
+              <li><b>The gains depend on the underlying model.</b> GPT-4o falls from 61.9 criterion F1 within RAG to 6.2 as a coding agent, while page-level SoA Activity&ndash;Visit F1 rises from 52.4 for Opus 4.6 to 86.3 for Opus 4.8.</li>
+              <li><b>Even the strongest agents do not fully solve the task.</b> The best endpoint F1 is 67.6, and on structured timeline extraction encounter recall reaches only 23.2.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/agent_rag_bar_matrix_delta.png" alt="F1 scores of coding agents and the RAG baseline for each model on study identification, eligibility criteria, and objectives and endpoints." loading="lazy">
+            <h2 class="subtitle has-text-centered">Coding agents and the RAG baseline on study identification, eligibility criteria, and objectives and endpoints. Annotations give &Delta; = Agent &minus; RAG.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/soa_results.png" alt="SoA extraction: page-level comparison with OCR baselines and document-level comparison with RAG." loading="lazy">
+            <h2 class="subtitle has-text-centered">SoA table extraction: page level against OCR and document-understanding baselines, document level against RAG.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/timeline_comparison.png" alt="Structured timeline results: epoch accuracy, activity recall, and encounter recall." loading="lazy">
+            <h2 class="subtitle has-text-centered">Structured timeline extraction on three official CDISC example protocols: epoch accuracy, activity recall, and encounter recall.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Failure analysis -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Failure Analysis</h2>
+          <div class="content has-text-justified">
+            <p>
+              We assign each failing agent run to one of five categories: transcription fidelity, long-document localization and coverage, relational structure reconstruction, domain concept grounding, and execution reliability. The dominant category differs by task. Transcription fidelity accounts for 76.1% of failing eligibility-criteria runs, and relational structure accounts for 78.1% of failing page-level SoA runs, most often because scheduling marks land in the wrong cells. Small transcription changes can alter clinical meaning: among near-verbatim criteria, 167 alter a comparison operator and 309 alter a number.
+            </p>
+          </div>
+          <div class="example-diff" aria-label="Transcription error example">
+            <span>Protocol</span><span class="ok">&ge; 100 meters</span>
+            <span>Agent</span><span class="bad">&gt; 100 meters</span>
+          </div>
+        </div>
+      </div>
+      <div class="figure-block">
+        <img src="static/images/failure_profile.png" alt="Distribution of failure categories within each task, and examples of the five categories." loading="lazy">
+        <p class="figure-caption">(a) Distribution of failure categories within each task. (b) Examples of the five categories, with incorrect or missing predictions in red.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TrialScribe -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">TrialScribe</h2>
+          <div class="content has-text-justified">
+            <p>
+              Protocols are often confidential, which favors open-weight models that run locally. TrialScribe is a domain-specific harness layer that equips an existing coding agent with <b>task skills</b>, one SKILL.md per task describing where protocols place the information and which conventions define a correct output, and a <b>verification loop</b>, in which a fresh session audits the draft against the protocol and the agent applies minimal source-supported fixes. It does not prescribe the agent's execution steps. We run it with Qwen3.8-27B in the Pi harness on four NVIDIA A100 GPUs.
+            </p>
+          </div>
+          <div class="gain-row" aria-label="Gains over Qwen3.8-27B without TrialScribe, in F1 points">
+            <div class="gain"><span class="d">+9.2</span><span class="m">Indication F1</span></div>
+            <div class="gain"><span class="d">+15.2</span><span class="m">Criterion F1</span></div>
+            <div class="gain"><span class="d">+22.2</span><span class="m">Objective F1</span></div>
+            <div class="gain"><span class="d">+18.8</span><span class="m">Endpoint F1</span></div>
+            <div class="gain"><span class="d">+17.9</span><span class="m">SoA Activity&ndash;Visit F1</span></div>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              With TrialScribe, the local model surpasses GPT-5.6-Sol on endpoint extraction (65.5 vs. 63.6) and comes within 1.9 points of Opus-5 on endpoints. It remains 2.2&ndash;7.5 points below both proprietary agents on indication, eligibility criteria, and objectives, and 13&ndash;15 points below them on page-level SoA extraction.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="figure-block">
+        <img src="static/images/trialscribe_results.png" alt="F1 scores of Qwen3.8-27B with and without TrialScribe, compared with Opus-5 and GPT-5.6-Sol." loading="lazy">
+        <p class="figure-caption">Qwen3.8-27B with TrialScribe, the same model without it, and two proprietary coding agents. The span above each pair of Qwen bars gives the gain in points.</p>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- BibTeX citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <!-- TODO: Replace with the final citation. -->
+      <pre id="bibtex-code"><code>@article{trialpdbench2026,
+  title={Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?},
+  author={Lin, Jiacheng and Low, Geoff and Agarwal, Nishit and Jain, Rahul and Fleming, Ian and Shafquat, Afrah and Beigi, Mandis and Sun, Jimeng},
+  year={2026}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.task-tabs a[data-task]'));
+    function show(a, focus) {
+      tabs.forEach(function (t) {
+        var on = t === a;
+        t.parentNode.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById('task-' + t.getAttribute('data-task')).hidden = !on;
+      });
+      if (focus) a.focus();
+    }
+    tabs.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); show(a, false); });
+      a.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        e.preventDefault();
+        show(tabs[(i + d + tabs.length) % tabs.length], true);
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
