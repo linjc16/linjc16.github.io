@@ -59,8 +59,9 @@
     .io-label { font-size: 0.85rem; color: #64748b; margin-bottom: 0.4rem; }
     .io-label .tag { margin-right: 0.35rem; font-weight: 600; }
     .io-box { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; height: 22rem; overflow: auto; }
-    .io-output { height: calc(22rem + 7.4rem); }
-    .io-input { display: flex; align-items: flex-start; justify-content: center; padding: 8px; }
+    .task-io > .column { display: flex; flex-direction: column; }
+    .io-output { flex: 1 1 0; min-height: 22rem; height: auto; }
+    .io-input { display: flex; align-items: flex-start; justify-content: center; padding: 8px; height: auto; overflow: visible; }
     .io-input img { width: 100%; height: auto; }
     .io-output pre { margin: 0; background: #f8fafc; font-size: 0.78rem; line-height: 1.5; white-space: pre-wrap; word-break: break-word; border-radius: 0; padding: 0.9rem 1rem; }
     .io-output .elide { color: #94a3b8; font-style: italic; }
@@ -162,6 +163,8 @@
       </div>
     </div>
   </section>
+
+
 
 
 
@@ -581,6 +584,8 @@
       </div>
     </div>
   </footer>
+
+
 
 
 
