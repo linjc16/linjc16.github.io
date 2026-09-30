@@ -1,0 +1,13 @@
+<div class="talk-list">
+{% for t in site.data.talks %}
+  <div class="talk-item">
+    <div class="talk-item__date">{{ t.date }}</div>
+    <div class="talk-item__body">
+      <div class="talk-item__title">{{ t.title }}</div>
+      <div class="talk-item__event"><span class="talk-item__kicker">{{ t.kicker }}</span> · {% if t.url %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}</div>
+      {% if t.meta %}<div class="talk-item__meta">{{ t.meta }}</div>{% endif %}
+      {% if t.desc %}<div class="talk-item__desc">{{ t.desc }}</div>{% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>

@@ -1,0 +1,19 @@
+<div class="pub-list">
+{% for p in site.data.selected_papers %}
+  <div class="pub-card">
+    <div class="pub-card__img">
+      {% if p.image %}<img src="{{ '/images/papers/' | append: p.image | relative_url }}" alt="{{ p.title | strip_html | escape }}" loading="lazy">
+      {% else %}<div class="pub-card__ph"></div>{% endif %}
+      <span class="pub-card__badge">{{ p.badge }}</span>
+    </div>
+    <div class="pub-card__body">
+      <a class="pub-card__title" href="{{ p.links[0].url }}">{{ p.title }}</a>
+      <div class="pub-card__venue">{{ p.venue }}</div>
+      <div class="pub-card__authors">{{ p.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+      {% if p.note %}<div class="pub-card__note">{{ p.note }}</div>{% endif %}
+      <div class="pub-card__links">{% for l in p.links %}<a href="{{ l.url }}">[{{ l.name }}]</a>{% endfor %}</div>
+      {% if p.coverage %}<div class="pub-card__coverage">News Coverage: {% for c in p.coverage %}<a href="{{ c.url }}">{{ c.name }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>{% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>

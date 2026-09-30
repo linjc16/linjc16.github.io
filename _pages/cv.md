@@ -40,6 +40,12 @@ Honors & Achievements
 - Outstanding Graduate of the Department of Automation at Tsinghua University
 - Outstanding MS Thesis of Tsinghua University
 
+Teaching Experience
+======
+- Spring 2026, TA for CS598 Deep Learning for Healthcare at UIUC, given by Prof. [Jimeng Sun](https://www.sunlab.org/).
+- Spring 2025, TA for CS598 Deep Learning for Healthcare at UIUC, given by Prof. [Jimeng Sun](https://www.sunlab.org/).
+- Spring 2022, TA for Operations Research at Tsinghua University, given by Prof. [Huangang Wang](https://www.au.tsinghua.edu.cn/info/1107/1557.htm).
+
 Activities
 ======
 - Vice-president of Student Union of Department of Automation, 2018 & 2019

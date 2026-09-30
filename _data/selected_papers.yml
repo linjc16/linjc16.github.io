@@ -1,0 +1,59 @@
+# image: file name under /images/papers/ (leave empty to show a placeholder block)
+# coverage: optional list of news coverage links
+# note: optional one-line note shown under the authors
+- title: "Apodex 1.1: Scaling Agentic Intelligence for Complex Work"
+  authors: "Apodex Team"
+  note: "Jiacheng Lin’s Contributions: Agentic Coding"
+  badge: "Tech Report 2026"
+  venue: "Technical Report, 2026"
+  image: apodex.jpg
+  links:
+    - {name: "Paper", url: "https://arxiv.org/pdf/2608.23283"}
+    - {name: "Website", url: "https://www.apodex.ai"}
+    - {name: "Code", url: "https://github.com/ApodexAI/FrontierAgent"}
+    - {name: "Models", url: "https://huggingface.co/collections/apodex/apodex-11"}
+- title: "SFT Doesn’t Always Hurt General Capabilities: Revisiting Domain-Specific Fine-Tuning in LLMs"
+  authors: "**Jiacheng Lin**, Zhongruo Wang, Kun Qian, Tian Wang, Arvind Srinivasan, Hansi Zeng, Ruocheng Jiao, Xie Zhou, Jiri Gesi, Dakuo Wang, Yufan Guo, Kai Zhong, Weiqi Zhang, Sujay Sanghavi, Changyou Chen, Hyokun Yun, Lihong Li"
+  badge: "ICLR 2026"
+  venue: "International Conference on Learning Representations (ICLR), 2026"
+  image: sft.jpg
+  links:
+    - {name: "Paper", url: "https://arxiv.org/pdf/2509.20758"}
+- title: "Benchmarking and Developing Large Language Models Using One Million Clinical Trials"
+  authors: "Zifeng Wang&#42;, **Jiacheng Lin**&#42;, Qiao Jin&#42;, Junyi Gao, Jathurshan Pradeepkumar, Pengcheng Jiang, Zhiyong Lu, Jimeng Sun"
+  badge: "npj Digit. Med. 2026"
+  venue: "npj Digital Medicine, 2026"
+  image: trialpanorama.jpg
+  links:
+    - {name: "Paper", url: "https://www.nature.com/articles/s41746-026-02933-7"}
+    - {name: "Project", url: "https://zifeng.wang/projects/trialpanorama.html"}
+    - {name: "Dataset", url: "https://huggingface.co/TrialPanorama/datasets"}
+    - {name: "Models", url: "https://huggingface.co/TrialPanorama/models"}
+  coverage:
+    - {name: "Nature Biotechnology", url: "https://www.nature.com/articles/s41587-025-02754-1"}
+    - {name: "MIT Technology Review", url: "https://www.mittrchina.com/news/detail/13865"}
+    - {name: "HyperAI", url: "https://hyper.ai/en/headlines/02a6bee604b7ee5f663194f05e0f4eee"}
+- title: "Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning"
+  authors: "**Jiacheng Lin**, Tian Wang, Kun Qian"
+  badge: "TMLR 2025"
+  venue: "Transactions on Machine Learning Research (TMLR), 2025"
+  image: rec-r1.jpg
+  links:
+    - {name: "Paper", url: "https://arxiv.org/pdf/2503.24289"}
+    - {name: "Code", url: "https://github.com/linjc16/Rec-R1"}
+- title: "DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning"
+  authors: "Pengcheng Jiang&#42;, <strong>Jiacheng Lin</strong>&#42;, Lang Cao, Runchu Tian, SeongKu Kang, Zifeng Wang, Jimeng Sun, Jiawei Han"
+  badge: "COLM 2025"
+  venue: "Conference on Language Modeling (COLM), 2025"
+  image: deepretrieval.jpg
+  links:
+    - {name: "Paper", url: "https://arxiv.org/pdf/2503.00223"}
+    - {name: "Code", url: "https://github.com/pat-jj/DeepRetrieval"}
+- title: "Pisces: A multi-modal data augmentation approach for drug combination synergy prediction"
+  authors: "Hanwen Xu&#42;, <strong>Jiacheng Lin</strong>&#42;, Addie Woicik, Zixuan Liu, Jianzhu Ma, Sheng Zhang, Hoifung Poon, Liewei Wang, Sheng Wang"
+  badge: "Cell Genomics 2025"
+  venue: "Cell Genomics, 2025"
+  image: pisces.jpg
+  links:
+    - {name: "Paper", url: "https://www.biorxiv.org/content/10.1101/2022.11.21.517439v2.full.pdf"}
+    - {name: "Code", url: "https://github.com/HanwenXuTHU/Pisces"}

@@ -39,3 +39,128 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+/* Collapsible older news */
+details > summary.news-more {
+  cursor: pointer;
+  color: $link-color;
+  font-weight: bold;
+  margin: 0.5em 0 1em;
+}
+
+
+/* Type sizes matched to reference homepage (16px base, 24px headings) */
+html { font-size: 16px; }
+.page__content h1 { font-size: 1.5em; }
+.sidebar .author__name { font-size: 1.15em; }
+.sidebar .author__bio,
+.sidebar .author__urls li { font-size: 0.8em; }
+.sidebar .author__urls a { font-size: 1em; }
+
+/* Smooth cross-fade between pages (Chrome/Safari); ignored elsewhere */
+@view-transition {
+  navigation: auto;
+}
+
+/* X (Twitter) icon in the sidebar; Font Awesome 5 has no X glyph */
+.icon-x {
+  width: 1.25em;
+  height: 1em;
+  padding: 0 0.1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+/* Selected papers: image-left cards with venue badge */
+.pub-card {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  padding: 1.25em 0;
+  border-bottom: 1px solid #ebedef;
+}
+.pub-card__img {
+  position: relative;
+  flex: 0 0 44%;
+  max-width: 300px;
+  img, .pub-card__ph {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.22);
+    background: #fff;
+    box-sizing: border-box;
+  }
+}
+.pub-card__ph {
+  aspect-ratio: 4 / 3;
+  background: #f1f2f4;
+}
+.pub-card__badge {
+  position: absolute;
+  top: -10px;
+  left: -6px;
+  padding: 0.12em 0.6em;
+  background: #7a4fd0;
+  color: #fff;
+  font-size: 0.72em;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.pub-card__body { flex: 1; min-width: 0; }
+.page__content a.pub-card__title {
+  display: block;
+  font-size: 1.05em;
+  line-height: 1.4;
+  margin-bottom: 0.35em;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-decoration: none;
+  &:hover {
+    color: #1f4e9c;
+    text-decoration: underline;
+  }
+}
+.pub-card__venue { font-style: italic; margin-bottom: 0.3em; font-size: 0.95em; }
+.pub-card__authors { font-size: 0.9em; line-height: 1.55; }
+.pub-card__authors strong { color: #000; }
+.pub-card__note { font-size: 0.85em; color: #6b7075; font-style: italic; margin-top: 0.15em; }
+.pub-card__links { margin-top: 0.3em; font-size: 0.9em; }
+.pub-card__links a { margin-right: 0.6em; }
+.pub-card__coverage { margin-top: 0.35em; font-size: 0.9em; color: #6b7075; }
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; align-items: stretch; }
+  .pub-card__img { flex: none; max-width: none; }
+}
+
+.pub-note { display: block; font-size: 0.8em; }
+
+/* Talks list */
+.talk-item {
+  display: flex;
+  gap: 1.25em;
+  padding: 0.9em 0;
+  border-bottom: 1px solid #ebedef;
+}
+.talk-item__date {
+  flex: 0 0 5.5em;
+  font-size: 0.9em;
+  color: #6b7075;
+  padding-top: 0.15em;
+}
+.talk-item__body { flex: 1; min-width: 0; }
+.talk-item__title { font-weight: 700; line-height: 1.4; margin-bottom: 0.25em; }
+.talk-item__event { font-size: 0.95em; }
+.talk-item__kicker { font-style: italic; }
+.talk-item__meta { font-size: 0.85em; color: #6b7075; margin-top: 0.2em; }
+.talk-item__desc { font-size: 0.9em; margin-top: 0.3em; }
+@media (max-width: 600px) {
+  .talk-item { flex-direction: column; gap: 0.2em; }
+  .talk-item__date { flex: none; }
+}
+
+/* Cleaner joins between list sections */
+.pub-card:last-child,
+.talk-item:last-child { border-bottom: none; }
+.page__content h1.section-gap { margin-top: 2.2em; }
