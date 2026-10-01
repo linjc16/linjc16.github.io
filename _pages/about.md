@@ -77,6 +77,6 @@ Talks
 
 ------
 
-<div style="width: 250px; margin: auto;">
-		<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=_nKY8Aa4sBB2V089bDyvy7GvbO2cc7iJqg_6TffbLJA&cl=ffffff&w=a"></script>
+<div class="visitor-map">
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=mXY4-HnUH_COKpLD8A2BUD67ha0l9IGjHZfEadrS4Os&cl=ffffff&w=a"></script>
 </div>
