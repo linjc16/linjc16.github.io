@@ -1,0 +1,15 @@
+<div class="work-list">
+{% for w in site.data.work %}
+  <div class="work-item{% if w.current %} work-item--current{% endif %}">
+    <div class="work-item__icon">{% if w.logo %}<img src="{{ '/images/logos/' | append: w.logo | relative_url }}" alt="{{ w.org }}">{% else %}<i class="{{ w.icon }}" aria-hidden="true"></i>{% endif %}</div>
+    <div class="work-item__body">
+      <div class="work-item__head">
+        <div class="work-item__title"><span class="work-item__role">{{ w.role }}</span><span class="work-item__sep"> · </span><span class="work-item__org">{% if w.url %}<a href="{{ w.url }}">{{ w.org }}</a>{% else %}{{ w.org }}{% endif %}</span></div>
+        <div class="work-item__date">{{ w.date }}{% if w.current %}<span class="work-item__now">Now</span>{% endif %}</div>
+      </div>
+      {% if w.with %}<div class="work-item__with">{{ w.with | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>{% endif %}
+      {% if w.project %}<div class="work-item__project"><span class="work-item__label">Project:</span> {{ w.project }}</div>{% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>

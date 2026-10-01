@@ -1,7 +1,9 @@
 # image: file name under /images/papers/ (leave empty to show a placeholder block)
 # coverage: optional list of news coverage links
 # note: optional one-line note shown under the authors
+# tag: optional topic label shown above the title (only for the main research themes)
 - title: "Apodex 1.1: Scaling Agentic Intelligence for Complex Work"
+  tag: "Agentic Coding"
   authors: "Apodex Team"
   note: "Jiacheng Lin’s Contributions: Agentic Coding"
   badge: "Tech Report 2026"
@@ -13,6 +15,7 @@
     - {name: "Code", url: "https://github.com/ApodexAI/FrontierAgent"}
     - {name: "Models", url: "https://huggingface.co/collections/apodex/apodex-11"}
 - title: "SFT Doesn’t Always Hurt General Capabilities: Revisiting Domain-Specific Fine-Tuning in LLMs"
+  tag: "LLM Post-Training"
   authors: "**Jiacheng Lin**, Zhongruo Wang, Kun Qian, Tian Wang, Arvind Srinivasan, Hansi Zeng, Ruocheng Jiao, Xie Zhou, Jiri Gesi, Dakuo Wang, Yufan Guo, Kai Zhong, Weiqi Zhang, Sujay Sanghavi, Changyou Chen, Hyokun Yun, Lihong Li"
   badge: "ICLR 2026"
   venue: "International Conference on Learning Representations (ICLR), 2026"
@@ -20,6 +23,7 @@
   links:
     - {name: "Paper", url: "https://arxiv.org/pdf/2509.20758"}
 - title: "Benchmarking and Developing Large Language Models Using One Million Clinical Trials"
+  tag: "LLM Post-Training"
   authors: "Zifeng Wang&#42;, **Jiacheng Lin**&#42;, Qiao Jin&#42;, Junyi Gao, Jathurshan Pradeepkumar, Pengcheng Jiang, Zhiyong Lu, Jimeng Sun"
   badge: "npj Digit. Med. 2026"
   venue: "npj Digital Medicine, 2026"
@@ -34,6 +38,7 @@
     - {name: "MIT Technology Review", url: "https://www.mittrchina.com/news/detail/13865"}
     - {name: "HyperAI", url: "https://hyper.ai/en/headlines/02a6bee604b7ee5f663194f05e0f4eee"}
 - title: "Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning"
+  tag: "LLM Post-Training"
   authors: "**Jiacheng Lin**, Tian Wang, Kun Qian"
   badge: "TMLR 2025"
   venue: "Transactions on Machine Learning Research (TMLR), 2025"
@@ -42,6 +47,7 @@
     - {name: "Paper", url: "https://arxiv.org/pdf/2503.24289"}
     - {name: "Code", url: "https://github.com/linjc16/Rec-R1"}
 - title: "DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning"
+  tag: "Agentic Search"
   authors: "Pengcheng Jiang&#42;, <strong>Jiacheng Lin</strong>&#42;, Lang Cao, Runchu Tian, SeongKu Kang, Zifeng Wang, Jimeng Sun, Jiawei Han"
   badge: "COLM 2025"
   venue: "Conference on Language Modeling (COLM), 2025"
