@@ -51,45 +51,6 @@
     .gain { border: 1px solid #e2e8f0; border-radius: 12px; padding: 0.6rem 1rem; min-width: 8.5rem; text-align: center; background: #fff; }
     .gain .d { display: block; font-size: 1.5rem; font-weight: 700; color: #0a6675; font-variant-numeric: tabular-nums; }
     .gain .m { font-size: 0.85rem; color: #64748b; }
-    /* Tasks section */
-    .task-intro { color: #64748b; max-width: 46rem; margin: 0 auto 1.25rem; }
-    .task-tabs ul { flex-wrap: wrap; }
-    .task-tabs a { white-space: nowrap; }
-    .task-what { margin-bottom: 1rem; }
-    .io-label { font-size: 0.85rem; color: #64748b; margin-bottom: 0.4rem; }
-    .io-label .tag { margin-right: 0.35rem; font-weight: 600; }
-    .io-box { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; height: 22rem; overflow: auto; }
-    .task-io > .column { display: flex; flex-direction: column; }
-    .io-output { flex: 1 1 0; min-height: 22rem; height: auto; }
-    .io-input { display: flex; align-items: flex-start; justify-content: center; padding: 8px; height: auto; overflow: visible; }
-    .io-input img { width: 100%; height: auto; }
-    .io-output pre { margin: 0; background: #f8fafc; font-size: 0.78rem; line-height: 1.5; white-space: pre-wrap; word-break: break-word; border-radius: 0; padding: 0.9rem 1rem; }
-    .io-output .elide { color: #94a3b8; font-style: italic; }
-    .soa-render { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; overflow-x: auto; }
-    .soa-render table { border-collapse: collapse; font-size: 0.72rem; }
-    .soa-render th, .soa-render td { border: 1px solid #cbd5e1; padding: 2px 6px; text-align: center; white-space: nowrap; }
-    .task-intro b { color: #0f172a; }
-    .pdf-doc { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; padding: 0.7rem 0.85rem; margin-bottom: 0.6rem; }
-    .pdf-head { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: #0f172a; }
-    .pdf-head .icon { color: #b91c1c; }
-    .pdf-head .pdf-n { margin-left: auto; font-variant-numeric: tabular-nums; color: #475569; font-weight: 600; }
-    .pdf-strip { position: relative; height: 22px; margin-top: 0.5rem; border-radius: 3px;
-      background: repeating-linear-gradient(90deg, #e2e8f0 0 1px, #f1f5f9 1px 4px); border: 1px solid #cbd5e1; }
-    .pdf-strip .pg { position: absolute; top: -3px; bottom: -3px; min-width: 3px; border-radius: 1px; }
-    .pdf-strip .pg.hit { background: #0a6675; }
-    .pdf-strip .pg.distract { background: #cbd5e1; top: 2px; bottom: 2px; }
-    .pdf-scale { display: flex; justify-content: space-between; font-size: 0.7rem; color: #94a3b8; margin-top: 0.15rem; font-variant-numeric: tabular-nums; }
-    .pdf-legend { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: 0.78rem; color: #475569; margin-top: 0.3rem; }
-    .pdf-legend .lg { display: inline-flex; align-items: center; gap: 0.35rem; }
-    .pdf-legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
-    .pdf-legend .sw.hit { background: #0a6675; }
-    .pdf-legend .sw.distract { background: #cbd5e1; }
-    .strip-note { font-size: 0.78rem; color: #475569; margin-top: 0.35rem; }
-    .io-input { position: relative; }
-    .page-badge { position: absolute; top: 8px; left: 8px; background: rgba(15,23,42,0.8); color: #fff; font-size: 0.72rem; padding: 0.1rem 0.5rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
-    .task-meta { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
-    @media (max-width: 768px) { .io-box { height: 20rem; } }
-    /* end tasks */
 
 
 
@@ -141,6 +102,45 @@
     @media (max-width: 520px) { .cap-grid { grid-template-columns: minmax(0, 1fr); } .pt-row { grid-template-columns: 8rem minmax(0, 1fr) 3.5rem; } }
     /* end PDF types and capabilities */
     .hf-icon { width: 1.15em; height: auto; display: block; }
+    /* Tasks section */
+    .task-intro { color: #64748b; max-width: 46rem; margin: 0 auto 1.25rem; }
+    .task-tabs ul { flex-wrap: wrap; }
+    .task-tabs a { white-space: nowrap; }
+    .task-what { margin-bottom: 1rem; }
+    .io-label { font-size: 0.85rem; color: #64748b; margin-bottom: 0.4rem; }
+    .io-label .tag { margin-right: 0.35rem; font-weight: 600; }
+    .io-box { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; height: 22rem; overflow: auto; }
+    .task-io > .column { display: flex; flex-direction: column; }
+    .io-output { flex: 1 1 0; min-height: 22rem; height: auto; }
+    .io-input { display: flex; align-items: flex-start; justify-content: center; padding: 8px; height: auto; overflow: visible; }
+    .io-input img { width: 100%; height: auto; }
+    .io-output pre { margin: 0; background: #f8fafc; font-size: 0.78rem; line-height: 1.5; white-space: pre-wrap; word-break: break-word; border-radius: 0; padding: 0.9rem 1rem; }
+    .io-output .elide { color: #94a3b8; font-style: italic; }
+    .soa-render { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; overflow-x: auto; }
+    .soa-render table { border-collapse: collapse; font-size: 0.72rem; }
+    .soa-render th, .soa-render td { border: 1px solid #cbd5e1; padding: 2px 6px; text-align: center; white-space: nowrap; }
+    .task-intro b { color: #0f172a; }
+    .pdf-doc { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; padding: 0.7rem 0.85rem; margin-bottom: 0.6rem; }
+    .pdf-head { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: #0f172a; }
+    .pdf-head .icon { color: #b91c1c; }
+    .pdf-head .pdf-n { margin-left: auto; font-variant-numeric: tabular-nums; color: #475569; font-weight: 600; }
+    .pdf-strip { position: relative; height: 22px; margin-top: 0.5rem; border-radius: 3px;
+      background: repeating-linear-gradient(90deg, #e2e8f0 0 1px, #f1f5f9 1px 4px); border: 1px solid #cbd5e1; }
+    .pdf-strip .pg { position: absolute; top: -3px; bottom: -3px; min-width: 3px; border-radius: 1px; }
+    .pdf-strip .pg.hit { background: #0a6675; }
+    .pdf-strip .pg.distract { background: #cbd5e1; top: 2px; bottom: 2px; }
+    .pdf-scale { display: flex; justify-content: space-between; font-size: 0.7rem; color: #94a3b8; margin-top: 0.15rem; font-variant-numeric: tabular-nums; }
+    .pdf-legend { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: 0.78rem; color: #475569; margin-top: 0.3rem; }
+    .pdf-legend .lg { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .pdf-legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+    .pdf-legend .sw.hit { background: #0a6675; }
+    .pdf-legend .sw.distract { background: #cbd5e1; }
+    .strip-note { font-size: 0.78rem; color: #475569; margin-top: 0.35rem; }
+    .io-input { position: relative; }
+    .page-badge { position: absolute; top: 8px; left: 8px; background: rgba(15,23,42,0.8); color: #fff; font-size: 0.72rem; padding: 0.1rem 0.5rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+    .task-meta { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
+    @media (max-width: 768px) { .io-box { height: 20rem; } }
+    /* end tasks */
   </style>
 </head>
 <body>
@@ -212,6 +212,7 @@
       </div>
     </div>
   </section>
+
 
 
 
@@ -297,7 +298,7 @@
 }</code></pre></div>
           </div>
         </div>
-        <p class="task-meta"><b>Evaluation:</b> Criterion F1 (exact match after normalization) &middot; <b>Test set:</b> 134 protocols</p>
+        <p class="task-meta"><b>Evaluation:</b> Eligibility criteria F1 (exact match after normalization) &middot; <b>Test set:</b> 134 protocols</p>
       </div>
       <div class="task-panel" role="tabpanel" id="task-objectives" aria-labelledby="task-tab-objectives" hidden>
         <p class="task-what">Extract every objective with its level and attach the endpoints that measure it. An endpoint's level is read from its own heading, so it can differ from its objective's level.</p>
@@ -458,7 +459,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Clinical trial protocol digitization converts protocol documents into structured, machine-readable study definitions that downstream trial systems can reuse. Existing LLM-based systems rely on predefined workflows, which may adapt poorly to the varied structure of complete protocols, whereas coding agents can choose tools and revise their processing strategy as they work. We investigate whether coding agents can reliably digitize clinical trial protocols. We introduce <b>TrialPD-Bench</b>, an expert-annotated benchmark of 150 protocol PDFs spanning four task categories: disease indication, eligibility criteria, objectives and endpoints, and schedule of activities. Evaluating ten proprietary and open-weight models across five coding-agent harnesses, we find that coding agents substantially outperform a predefined retrieval-augmented generation pipeline and specialist OCR models, but their gains depend on the underlying model, and even the strongest agents leave substantial errors. We further develop <b>TrialScribe</b>, a domain-specific harness that equips coding agents with task skills and a verification loop. TrialScribe improves a locally served open-weight model by 9.2&ndash;22.2 points across tasks, enabling it to surpass GPT-5.6-Sol on endpoint extraction.
+              Clinical trial protocol digitization converts protocol documents into structured, machine-readable study definitions that downstream trial systems can reuse. Existing LLM-based systems rely on predefined workflows, which may adapt poorly to the varied structure of complete protocols, whereas coding agents can choose tools and revise their processing strategy as they work. We investigate whether coding agents can reliably digitize clinical trial protocols. We introduce <b>TrialPD-Bench</b>, an expert-annotated benchmark of 150 protocol PDFs spanning four task categories: disease indication, eligibility criteria, objectives and endpoints, and schedule of activities. Evaluating ten proprietary and open-weight models across five coding-agent harnesses, we find that coding agents substantially outperform a predefined retrieval-augmented generation (RAG) pipeline and specialist OCR models, but their gains depend on the underlying model, and even the strongest agents can have substantial errors. We further develop <b>TrialScribe</b>, a domain-specific harness that equips coding agents with task skills and a verification loop. TrialScribe improves a locally served open-weight model by 9.2&ndash;22.2 F1 points across tasks, enabling it to match or surpass proprietary models such as GPT-5.6-Sol.
             </p>
           </div>
         </div>
@@ -493,7 +494,7 @@
           </thead>
           <tbody>
             <tr><td>Disease indication</td><td>Protocol PDF</td><td class="num">40</td><td>41 indication descriptions</td><td>Indication F1</td></tr>
-            <tr><td>Eligibility criteria</td><td>Protocol PDF</td><td class="num">134</td><td>3,974 criteria (1,337 inclusion, 2,637 exclusion)</td><td>Criterion F1</td></tr>
+            <tr><td>Eligibility criteria</td><td>Protocol PDF</td><td class="num">134</td><td>3,974 criteria (1,337 inclusion, 2,637 exclusion)</td><td>Eligibility criteria F1</td></tr>
             <tr><td>Objectives and endpoints</td><td>Protocol PDF</td><td class="num">89</td><td>665 objectives, 1,484 endpoints</td><td>Objective, endpoint, objective-linked endpoint F1</td></tr>
             <tr><td>SoA table, page level</td><td>Single SoA page</td><td class="num">86</td><td>86 tables, 5,001 activity&ndash;visit pairs</td><td>Activity&ndash;Visit F1, Sub/sup F1</td></tr>
             <tr><td>SoA table, document level</td><td>Protocol PDF</td><td class="num">37</td><td>70 tables</td><td>Page recall, Activity&ndash;Visit F1</td></tr>
@@ -608,10 +609,10 @@
           <h2 class="title is-3">Main Results</h2>
           <div class="content findings">
             <ul>
-              <li><b>Coding agents substantially outperform a RAG pipeline.</b> With the same model, agents improve criterion F1 by 14.3&ndash;55.9 points and endpoint F1 by 4.7&ndash;28.9 points for nine of ten models. On SoA tables the six strongest agents reach 74.7&ndash;86.8 Activity&ndash;Visit F1, against 19.8&ndash;51.5 for RAG.</li>
+              <li><b>Coding agents substantially outperform a RAG pipeline.</b> With the same model, agents improve eligibility criteria F1 by 14.3&ndash;55.9 points and endpoint F1 by 4.7&ndash;28.9 points for nine of ten models. On SoA tables the six strongest agents reach 74.7&ndash;86.8 Activity&ndash;Visit F1, against 19.8&ndash;51.5 for RAG.</li>
               <li><b>Coding agents outperform specialist OCR and document-understanding models on SoA tables.</b> The six strongest agents reach 84.3&ndash;90.0 page-level Activity&ndash;Visit F1; the best specialist baseline, Mistral OCR, reaches 71.7.</li>
-              <li><b>The gains depend on the underlying model.</b> GPT-4o falls from 61.9 criterion F1 within RAG to 6.2 as a coding agent, while page-level SoA Activity&ndash;Visit F1 rises from 52.4 for Opus 4.6 to 86.3 for Opus 4.8.</li>
-              <li><b>Even the strongest agents do not fully solve the task.</b> The best endpoint F1 is 67.6, and on structured timeline extraction encounter recall reaches only 23.2.</li>
+              <li><b>The gains depend on the underlying model.</b> GPT-4o falls from 61.9 eligibility criteria F1 within RAG to 6.2 as a coding agent, while page-level SoA Activity&ndash;Visit F1 rises from 52.4 for Opus 4.6 to 86.3 for Opus 4.8.</li>
+              <li><b>Even the strongest agents do not fully solve the task.</b> The best endpoint F1 is 67.4, and on structured timeline extraction encounter recall reaches only 23.2.</li>
             </ul>
           </div>
         </div>
@@ -677,7 +678,7 @@
           </div>
           <div class="gain-row" aria-label="Gains over Qwen3.8-27B without TrialScribe, in F1 points">
             <div class="gain"><span class="d">+9.2</span><span class="m">Indication F1</span></div>
-            <div class="gain"><span class="d">+15.2</span><span class="m">Criterion F1</span></div>
+            <div class="gain"><span class="d">+15.2</span><span class="m">Eligibility criteria F1</span></div>
             <div class="gain"><span class="d">+22.2</span><span class="m">Objective F1</span></div>
             <div class="gain"><span class="d">+18.8</span><span class="m">Endpoint F1</span></div>
             <div class="gain"><span class="d">+17.9</span><span class="m">SoA Activity&ndash;Visit F1</span></div>
@@ -790,30 +791,6 @@
 
 
 
-  <script>
-  (function () {
-    var tabs = Array.prototype.slice.call(document.querySelectorAll('.task-tabs a[data-task]'));
-    function show(a, focus) {
-      tabs.forEach(function (t) {
-        var on = t === a;
-        t.parentNode.classList.toggle('is-active', on);
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-        t.tabIndex = on ? 0 : -1;
-        document.getElementById('task-' + t.getAttribute('data-task')).hidden = !on;
-      });
-      if (focus) a.focus();
-    }
-    tabs.forEach(function (a, i) {
-      a.addEventListener('click', function (e) { e.preventDefault(); show(a, false); });
-      a.addEventListener('keydown', function (e) {
-        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-        if (!d) return;
-        e.preventDefault();
-        show(tabs[(i + d + tabs.length) % tabs.length], true);
-      });
-    });
-  })();
-  </script>
 
   <!-- SoA case study script: generated by build_case.py -->
   <script>
@@ -841,5 +818,30 @@
   })();
   </script>
   <!-- end SoA case study script -->
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.task-tabs a[data-task]'));
+    function show(a, focus) {
+      tabs.forEach(function (t) {
+        var on = t === a;
+        t.parentNode.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById('task-' + t.getAttribute('data-task')).hidden = !on;
+      });
+      if (focus) a.focus();
+    }
+    tabs.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); show(a, false); });
+      a.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        e.preventDefault();
+        show(tabs[(i + d + tabs.length) % tabs.length], true);
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
