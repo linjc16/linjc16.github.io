@@ -140,6 +140,7 @@
     @media (max-width: 900px) { .cap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 520px) { .cap-grid { grid-template-columns: minmax(0, 1fr); } .pt-row { grid-template-columns: 8rem minmax(0, 1fr) 3.5rem; } }
     /* end PDF types and capabilities */
+    .hf-icon { width: 1.15em; height: auto; display: block; }
   </style>
 </head>
 <body>
@@ -186,10 +187,9 @@
                     <span>Code</span>
                   </a>
                 </span>
-                <!-- TODO: Replace # with the benchmark data release. -->
                 <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-database"></i></span>
+                  <a href="https://huggingface.co/datasets/linjc16/TrialPD-Bench" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><img src="static/images/hf-logo.svg" alt="" class="hf-icon"></span>
                     <span>Benchmark</span>
                   </a>
                 </span>
