@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Check my resume [here](https://linjc16.github.io/files/CV_JiachengLin.pdf) (Last Updated: June 2026).
+Check my resume [here](https://linjc16.github.io/files/CV_JiachengLin.pdf) (Last Updated: Oct 2026).
 
 Education
 ======
