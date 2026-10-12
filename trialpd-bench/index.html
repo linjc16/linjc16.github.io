@@ -615,7 +615,6 @@
               <li><b>Locating the evidence is not the main bottleneck.</b> Except for Kimi-K3 on objectives and endpoints, the seven frontier agents visit at least 84.8% of the required evidence pages on every task, yet higher evidence recall does not translate into better extraction. On structured timelines, every agent visits at least 98.3% of the evidence pages while encounter recall stays at or below 23.2. Agents fail in the <b>last mile</b> of transcribing and structuring the evidence.</li>
               <li><b>Tool errors and interaction turns scale with task complexity.</b> Averaged over the nine agents, SoA table extraction takes 39.8 turns per run, against 7.1 for indication extraction, and weaker models incur more tool errors and use visual evidence less often when it is required. Longer trajectories do not produce better answers.</li>
               <li><b>Similar accuracy can come at very different costs.</b> On eligibility criteria, the seven frontier agents lie within 1.4 F1 points of each other while the cost per run ranges from $0.40 to $1.35; DeepSeek-V4-Flash reaches 80.2 F1 at $0.04 per run.</li>
-              <li><b>Coding agents outperform a RAG pipeline and specialist OCR models.</b> With the same model, agents beat RAG on most tasks, and on single SoA pages the six strongest agents reach 84.3&ndash;90.0 Activity&ndash;Visit F1, against 71.7 for the best OCR baseline, Mistral OCR.</li>
             </ul>
           </div>
         </div>
@@ -642,10 +641,6 @@
             <p class="figure-caption">Single SoA pages: coding agents against OCR and document-understanding baselines.</p>
           </div>
         </div>
-      </div>
-      <div class="figure-block" style="margin-top:1.5rem">
-        <img src="static/images/agent_rag_bar_matrix_delta.png" alt="F1 scores of coding agents and the RAG baseline for each model on disease indication, eligibility criteria, and objectives and endpoints." loading="lazy">
-        <p class="figure-caption">Coding agents and the RAG baseline with the same model on disease indication, eligibility criteria, and objectives and endpoints (&Delta; = Agent &minus; RAG).</p>
       </div>
     </div>
   </section>
