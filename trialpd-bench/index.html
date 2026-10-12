@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TrialPD-Bench</title>
-  <meta name="description" content="TrialPD-Bench evaluates coding agents on clinical trial protocol digitization from complete protocol PDFs, and TrialScribe adds task skills and a verification loop.">
-  <meta name="keywords" content="clinical trial protocol, protocol digitization, coding agents, benchmark, USDM, schedule of activities, eligibility criteria">
+  <meta name="description" content="An empirical study of coding agents on long-document tasks, using clinical trial protocol digitization as a testbed: TrialPD-Bench, failure analysis, and TrialScribe.">
+  <meta name="keywords" content="coding agents, long-document tasks, clinical trial protocol, protocol digitization, benchmark, USDM, schedule of activities, eligibility criteria">
   <meta name="author" content="Jiacheng Lin, Geoff Low, Nishit Agarwal, Rahul Jain, Afrah Shafquat, Mandis Beigi, Jimeng Sun">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?">
-  <meta property="og:description" content="TrialPD-Bench: 150 protocol PDFs, four task categories, ten models in five coding-agent harnesses.">
-  <meta property="og:image" content="static/images/benchmark_overview.png">
+  <meta property="og:title" content="The Last Mile of Coding Agents for Long-Document Tasks: An Empirical Study on Clinical Trial Protocol Digitization">
+  <meta property="og:description" content="Coding agents usually locate the required evidence in long protocols but fail in the last mile of transcribing and structuring it. TrialPD-Bench: 150 protocol PDFs, four task categories, nine models in five coding-agent harnesses.">
+  <meta property="og:image" content="static/images/figure1_overview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="citation_title" content="Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?">
+  <meta name="citation_title" content="The Last Mile of Coding Agents for Long-Document Tasks: An Empirical Study on Clinical Trial Protocol Digitization">
 
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -155,7 +155,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?</h1>
+            <h1 class="title is-1 publication-title">The Last Mile of Coding Agents for Long-Document Tasks: An Empirical Study on Clinical Trial Protocol Digitization</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Wrap names in <a href="..."> to link personal pages. -->
               <span class="author-block">Jiacheng Lin<sup>1</sup>,</span>
@@ -204,9 +204,9 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/benchmark_overview.png" alt="Overview of TrialPD-Bench: source documents and the four task categories, therapeutic-area coverage, document-length distribution, and study counts across sponsors." style="width:100%;height:auto">
+        <img src="static/images/figure1_overview.png" alt="Overview of the study: coding agents must localize evidence, interpret complex layouts, and link information across long protocols; overall score against cost per run; and TrialScribe with Qwen3.8-27B against the same model without it, Opus 5, and GPT-5.6-Sol." style="width:100%;height:auto">
         <h2 class="subtitle has-text-centered">
-          <b>TrialPD-Bench</b> evaluates protocol digitization on 150 complete protocol PDFs from 106 sponsors and 18 therapeutic areas, with a median length of 122 pages.
+          <b>(a&ndash;c)</b> Coding agents must localize evidence, interpret complex layouts, and link information across long protocols; output quality varies across tasks. <b>(d)</b> Overall score on <b>TrialPD-Bench</b> against average cost per run. <b>(e)</b> <b>TrialScribe</b> with Qwen3.8-27B versus the same model without it, Opus 5, and GPT-5.6-Sol.
         </h2>
       </div>
     </div>
@@ -355,7 +355,7 @@
         <p class="task-meta"><b>Evaluation:</b> Objective, endpoint, and objective-linked endpoint F1 &middot; <b>Test set:</b> 89 protocols</p>
       </div>
       <div class="task-panel" role="tabpanel" id="task-soa" aria-labelledby="task-tab-soa" hidden>
-        <p class="task-what">Transcribe the SoA table into HTML, resolving merged cells and multi-level visit headers and keeping footnote markers as superscripts. At the document level, the agent must first find the SoA pages.</p>
+        <p class="task-what">Find the SoA pages in the protocol and transcribe each SoA table into HTML, resolving merged cells and multi-level visit headers and keeping footnote markers as superscripts.</p>
         <div class="columns task-io">
           <div class="column is-half">
             <p class="io-label"><span class="tag is-light">Input</span> the entire protocol PDF</p>
@@ -363,7 +363,7 @@
               <div class="pdf-head"><span class="icon"><i class="fas fa-file-pdf"></i></span><b>Protocol PDF</b><span class="pdf-n">127 pages</span></div>
               <div class="pdf-strip" role="img" aria-label="127-page PDF; the answer is on page 11 to 12, 14, 16 to 18"><span class="pg hit" style="left:7.874%;width:0.787%"></span><span class="pg hit" style="left:8.661%;width:0.787%"></span><span class="pg hit" style="left:10.236%;width:0.787%"></span><span class="pg hit" style="left:11.811%;width:0.787%"></span><span class="pg hit" style="left:12.598%;width:0.787%"></span><span class="pg hit" style="left:13.386%;width:0.787%"></span></div>
               <div class="pdf-scale"><span>p. 1</span><span>p. 127</span></div>
-              <div class="pdf-legend"><span class="lg"><i class="sw hit"></i>answer on pages 11&ndash;12, 14, 16&ndash;18</span></div><p class="strip-note">The document-level track gives the whole PDF, and the agent must find all six SoA pages. The page-level track gives one of these pages at a time.</p>
+              <div class="pdf-legend"><span class="lg"><i class="sw hit"></i>answer on pages 11&ndash;12, 14, 16&ndash;18</span></div><p class="strip-note">The agent receives the whole PDF and must find all six SoA pages before transcribing them.</p>
             </div>
             <div class="io-box io-input"><span class="page-badge">page 11 of 127</span><img src="static/images/tasks/p11.jpg" alt="Page 11 of the protocol PDF"></div>
           </div>
@@ -379,10 +379,10 @@
 &lt;/table&gt;</code></pre></div>
           </div>
         </div>
-        <p class="task-meta"><b>Evaluation:</b> Activity&ndash;Visit F1, Sub/sup F1, page recall &middot; <b>Test set:</b> 86 pages; 37 protocols</p>
+        <p class="task-meta"><b>Evaluation:</b> Activity&ndash;Visit F1, Sub/sup F1 &middot; <b>Test set:</b> 37 protocols</p>
       </div>
       <div class="task-panel" role="tabpanel" id="task-timeline" aria-labelledby="task-tab-timeline" hidden>
-        <p class="task-what">Recover the study's epochs in order, its encounters with USDM type, environmental setting, and contact modes, and its activities.</p>
+        <p class="task-what">Recover the study's epochs in order, its encounters with their USDM type and contact modes, and its activities.</p>
         <div class="columns task-io">
           <div class="column is-half">
             <p class="io-label"><span class="tag is-light">Input</span> the entire protocol PDF</p>
@@ -419,14 +419,12 @@
       &quot;label&quot;: &quot;Screening 1&quot;,
       &quot;description&quot;: &quot;Screening encounter&quot;,
       &quot;type&quot;: &quot;Visit&quot;,
-      &quot;environmentalSetting&quot;: &quot;CLINIC&quot;,
       &quot;contactModes&quot;: &quot;In Person&quot;
     },
     {
       &quot;label&quot;: &quot;Screening 2&quot;,
       &quot;description&quot;: &quot;Screening encounter - Ambulatory ECG Placement&quot;,
       &quot;type&quot;: &quot;Visit&quot;,
-      &quot;environmentalSetting&quot;: &quot;CLINIC&quot;,
       &quot;contactModes&quot;: &quot;In Person&quot;
     }
   ],
@@ -458,7 +456,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Clinical trial protocol digitization converts protocol documents into structured, machine-readable study definitions that downstream trial systems can reuse. Existing LLM-based systems rely on predefined workflows, which may adapt poorly to the varied structure of complete protocols, whereas coding agents can choose tools and revise their processing strategy as they work. We investigate whether coding agents can reliably digitize clinical trial protocols. We introduce <b>TrialPD-Bench</b>, an expert-annotated benchmark of 150 protocol PDFs spanning four task categories: disease indication, eligibility criteria, objectives and endpoints, and schedule of activities. Evaluating ten proprietary and open-weight models across five coding-agent harnesses, we find that coding agents substantially outperform a predefined retrieval-augmented generation (RAG) pipeline and specialist OCR models, but their gains depend on the underlying model, and even the strongest agents can have substantial errors. We further develop <b>TrialScribe</b>, a domain-specific harness that equips coding agents with task skills and a verification loop. TrialScribe improves a locally served open-weight model by 9.2&ndash;22.2 F1 points across tasks, enabling it to match or surpass proprietary models such as GPT-5.6-Sol.
+              Clinical trial protocols serve as the source of truth for study design, but they are mostly written and used as unstructured PDF documents. Digitizing protocols turns static content into structured, machine-readable data that clinical software can analyze, validate, and execute. Ultimately, protocol digitization transforms protocols from readable documents into actionable digital assets that streamline trial execution. Coding agents, which select tools, execute code, and revise their approach as they work, are increasingly applied to such long-document tasks, yet it remains unclear how reliably they turn complete documents into accurate structured outputs. We study this question using protocol digitization as a testbed. We introduce <b>TrialPD-Bench</b>, an expert-annotated benchmark of 150 publicly available protocol PDFs spanning four task categories. Beyond final-answer performance, our evaluation measures evidence recall from agent traces, agent behavior, and cost. Across nine proprietary and open-weight models in five coding-agent harnesses, <b>even the strongest agents do not fully solve protocol digitization</b>. Our study further sheds light on where coding agents fall short on long documents: <b>agents usually locate the required evidence but fail in the last mile of transcribing and structuring it</b>. Building on these findings, we develop <b>TrialScribe</b>, a domain-specific harness that equips coding agents with task skills and a verification loop. TrialScribe improves a locally served open-weight model by 6.2&ndash;59.4 points across eight metrics, <b>enabling it to match or surpass proprietary models such as GPT-5.6-Sol</b>.
             </p>
           </div>
         </div>
@@ -482,7 +480,8 @@
             <span class="stat-chip"><b>17,471</b> pages</span>
             <span class="stat-chip"><b>106</b> sponsors</span>
             <span class="stat-chip"><b>18</b> therapeutic areas</span>
-            <span class="stat-chip"><b>10</b> models &times; <b>5</b> agent harnesses</span>
+            <span class="stat-chip">median <b>122</b> pages</span>
+            <span class="stat-chip"><b>9</b> models &times; <b>5</b> agent harnesses</span>
           </div>
         </div>
       </div>
@@ -492,14 +491,18 @@
             <tr><th>Task</th><th>Input</th><th class="num">Samples</th><th>Reference annotations</th><th>Main metrics</th></tr>
           </thead>
           <tbody>
-            <tr><td>Disease indication</td><td>Protocol PDF</td><td class="num">40</td><td>41 indication descriptions</td><td>Indication F1</td></tr>
+            <tr><td>Disease indication</td><td>Protocol PDF</td><td class="num">40</td><td>41 indication descriptions; 1&ndash;2 per sample</td><td>Indication F1</td></tr>
             <tr><td>Eligibility criteria</td><td>Protocol PDF</td><td class="num">134</td><td>3,974 criteria (1,337 inclusion, 2,637 exclusion)</td><td>Eligibility criteria F1</td></tr>
-            <tr><td>Objectives and endpoints</td><td>Protocol PDF</td><td class="num">89</td><td>665 objectives, 1,484 endpoints</td><td>Objective, endpoint, objective-linked endpoint F1</td></tr>
-            <tr><td>SoA table, page level</td><td>Single SoA page</td><td class="num">86</td><td>86 tables, 5,001 activity&ndash;visit pairs</td><td>Activity&ndash;Visit F1, Sub/sup F1</td></tr>
-            <tr><td>SoA table, document level</td><td>Protocol PDF</td><td class="num">37</td><td>70 tables</td><td>Page recall, Activity&ndash;Visit F1</td></tr>
+            <tr><td>Objectives and endpoints</td><td>Protocol PDF</td><td class="num">89</td><td>665 objectives, 1,484 endpoints; 60 objectives without endpoints</td><td>Objective, endpoint, objective-linked endpoint F1</td></tr>
+            <tr><td>SoA tables</td><td>Protocol PDF</td><td class="num">37</td><td>70 tables; 10 protocols with multiple SoA pages</td><td>Activity&ndash;Visit F1, Sub/sup F1</td></tr>
             <tr><td>Structured timeline</td><td>Protocol PDF</td><td class="num">3</td><td>14 epochs, 69 encounters, 115 activities</td><td>Epoch accuracy, activity and encounter recall</td></tr>
           </tbody>
         </table>
+      </div>
+      <p class="figure-caption">Test-split statistics; the development protocols used to build TrialScribe are held out.</p>
+      <div class="figure-block" style="margin-top:1.5rem">
+        <img src="static/images/benchmark_overview.png" alt="Overview of TrialPD-Bench: source documents and the four task categories, therapeutic-area coverage, document-length distribution, and study counts across sponsors." loading="lazy">
+        <p class="figure-caption">Overview of TrialPD-Bench: source documents and the four task categories, therapeutic-area coverage, document-length distribution (median 122 pages), and study counts across 106 sponsors.</p>
       </div>
 
       <!-- PDF types: generated by build_capabilities.py -->
@@ -588,7 +591,7 @@
           <div class="cap-card">
             <div class="cap-head"><span class="icon"><i class="fas fa-stethoscope"></i></span><b>Domain concept grounding</b></div>
             <p>Pick the clinical entity, category, or controlled term the standard asks for.</p>
-            <p class="cap-eg">e.g., &ldquo;Clinical research unit&rdquo; instead of the USDM term CLINIC</p>
+            <p class="cap-eg">e.g., &ldquo;Non-Valvular Atrial Fibrillation&rdquo; for a study of recurrent embolic stroke</p>
           </div>
           <div class="cap-card">
             <div class="cap-head"><span class="icon"><i class="fas fa-cogs"></i></span><b>Execution reliability</b></div>
@@ -608,10 +611,11 @@
           <h2 class="title is-3">Main Results</h2>
           <div class="content findings">
             <ul>
-              <li><b>Coding agents substantially outperform a RAG pipeline.</b> With the same model, agents improve eligibility criteria F1 by 14.3&ndash;55.9 points and endpoint F1 by 4.7&ndash;28.9 points for nine of ten models. On SoA tables the six strongest agents reach 74.7&ndash;86.8 Activity&ndash;Visit F1, against 19.8&ndash;51.5 for RAG.</li>
-              <li><b>Coding agents outperform specialist OCR and document-understanding models on SoA tables.</b> The six strongest agents reach 84.3&ndash;90.0 page-level Activity&ndash;Visit F1; the best specialist baseline, Mistral OCR, reaches 71.7.</li>
-              <li><b>The gains depend on the underlying model.</b> GPT-4o falls from 61.9 eligibility criteria F1 within RAG to 6.2 as a coding agent, while page-level SoA Activity&ndash;Visit F1 rises from 52.4 for Opus 4.6 to 86.3 for Opus 4.8.</li>
-              <li><b>Even the strongest agents do not fully solve the task.</b> The best endpoint F1 is 67.4, and on structured timeline extraction encounter recall reaches only 23.2.</li>
+              <li><b>Even the strongest coding agents do not fully solve protocol digitization.</b> The best agents reach 87.8 eligibility criteria F1 and 86.8 SoA Activity&ndash;Visit F1, but only 67.4 endpoint F1, 58.7 objective-linked endpoint F1, and 23.2 encounter recall. The largest gaps lie in the relational structure of a protocol rather than in its surface content.</li>
+              <li><b>Locating the evidence is not the main bottleneck.</b> Except for Kimi-K3 on objectives and endpoints, the seven frontier agents visit at least 84.8% of the required evidence pages on every task, yet higher evidence recall does not translate into better extraction. On structured timelines, every agent visits at least 98.3% of the evidence pages while encounter recall stays at or below 23.2. Agents fail in the <b>last mile</b> of transcribing and structuring the evidence.</li>
+              <li><b>Tool errors and interaction turns scale with task complexity.</b> Averaged over the nine agents, SoA table extraction takes 39.8 turns per run, against 7.1 for indication extraction, and weaker models incur more tool errors and use visual evidence less often when it is required. Longer trajectories do not produce better answers.</li>
+              <li><b>Similar accuracy can come at very different costs.</b> On eligibility criteria, the seven frontier agents lie within 1.4 F1 points of each other while the cost per run ranges from $0.40 to $1.35; DeepSeek-V4-Flash reaches 80.2 F1 at $0.04 per run.</li>
+              <li><b>Coding agents outperform a RAG pipeline and specialist OCR models.</b> With the same model, agents beat RAG on most tasks, and on single SoA pages the six strongest agents reach 84.3&ndash;90.0 Activity&ndash;Visit F1, against 71.7 for the best OCR baseline, Mistral OCR.</li>
             </ul>
           </div>
         </div>
@@ -619,23 +623,29 @@
     </div>
   </section>
 
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <img src="static/images/agent_rag_bar_matrix_delta.png" alt="F1 scores of coding agents and the RAG baseline for each model on disease indication, eligibility criteria, and objectives and endpoints." loading="lazy">
-            <h2 class="subtitle has-text-centered">Coding agents and the RAG baseline on disease indication, eligibility criteria, and objectives and endpoints. Annotations give &Delta; = Agent &minus; RAG.</h2>
-          </div>
-          <div class="item">
-            <img src="static/images/soa_results.png" alt="SoA extraction: page-level comparison with OCR baselines and document-level comparison with RAG." loading="lazy">
-            <h2 class="subtitle has-text-centered">SoA table extraction: page level against OCR and document-understanding baselines, document level against RAG.</h2>
-          </div>
-          <div class="item">
-            <img src="static/images/timeline_comparison.png" alt="Structured timeline results: epoch accuracy, activity recall, and encounter recall." loading="lazy">
-            <h2 class="subtitle has-text-centered">Structured timeline extraction on three official CDISC example protocols: epoch accuracy, activity recall, and encounter recall.</h2>
+  <section class="section results-figs" style="padding-top:0">
+    <div class="container is-max-desktop">
+      <div class="figure-block">
+        <img src="static/images/main_results_table.png" alt="Main results of nine coding agents on TrialPD-Bench: final-answer metrics and evidence recall for each task." loading="lazy">
+        <p class="figure-caption">Main results (%) on TrialPD-Bench. Each task reports its final-answer metrics followed by evidence recall (ER), the recall of the required evidence pages visited in the agent trace.</p>
+      </div>
+      <div class="columns is-vcentered" style="margin-top:1.5rem">
+        <div class="column is-half">
+          <div class="figure-block">
+            <img src="static/images/release_trend.png" alt="SoA Activity-Visit F1 against model release date." loading="lazy">
+            <p class="figure-caption">SoA Activity&ndash;Visit F1 on complete protocols against model release date. Hollow markers denote open-weight models.</p>
           </div>
         </div>
+        <div class="column is-half">
+          <div class="figure-block">
+            <img src="static/images/soa_results.png" alt="Page-level SoA extraction: coding agents against OCR and document-understanding baselines." loading="lazy">
+            <p class="figure-caption">Single SoA pages: coding agents against OCR and document-understanding baselines.</p>
+          </div>
+        </div>
+      </div>
+      <div class="figure-block" style="margin-top:1.5rem">
+        <img src="static/images/agent_rag_bar_matrix_delta.png" alt="F1 scores of coding agents and the RAG baseline for each model on disease indication, eligibility criteria, and objectives and endpoints." loading="lazy">
+        <p class="figure-caption">Coding agents and the RAG baseline with the same model on disease indication, eligibility criteria, and objectives and endpoints (&Delta; = Agent &minus; RAG).</p>
       </div>
     </div>
   </section>
@@ -648,7 +658,7 @@
           <h2 class="title is-3">Failure Analysis</h2>
           <div class="content has-text-justified">
             <p>
-              We assign each failing agent run to one of five categories: transcription fidelity, long-document localization and coverage, relational structure reconstruction, domain concept grounding, and execution reliability. The dominant category differs by task. Transcription fidelity accounts for 76.1% of failing eligibility-criteria runs, and relational structure accounts for 78.1% of failing page-level SoA runs, most often because scheduling marks land in the wrong cells. Small transcription changes can alter clinical meaning: among near-verbatim criteria, 167 alter a comparison operator and 309 alter a number.
+              We classify the failures in each failing agent run into five main categories: transcription fidelity, long-document localization and coverage, relational structure reconstruction, domain concept grounding, and execution reliability. The dominant category differs by task. Transcription fidelity accounts for 88.0% of failing eligibility-criteria runs: agents read the right section but do not reproduce it exactly, and among near-verbatim criteria, 167 alter a comparison operator and 308 alter a number. Relational structure accounts for 58.9% of failing SoA runs, most often because scheduling marks land in the wrong cells. Domain concept grounding dominates disease indication and structured timelines, while execution reliability accounts for at most 3.6% of failing runs in any task.
             </p>
           </div>
           <div class="example-diff" aria-label="Transcription error example">
@@ -672,26 +682,29 @@
           <h2 class="title is-3">TrialScribe</h2>
           <div class="content has-text-justified">
             <p>
-              Protocols are often confidential, which favors open-weight models that run locally. TrialScribe is a domain-specific harness layer that equips an existing coding agent with <b>task skills</b>, one SKILL.md per task describing where protocols place the information and which conventions define a correct output, and a <b>verification loop</b>, in which a fresh session audits the draft against the protocol and the agent applies minimal source-supported fixes. It does not prescribe the agent's execution steps. We run it with Qwen3.8-27B in the Pi harness on four NVIDIA A100 GPUs.
+              Protocols are often confidential, which favors compact open-weight models that run locally, and most failures arise after the evidence is found. TrialScribe is a domain-specific harness layer that equips an existing coding agent with <b>task skills</b>, which supply domain knowledge and output conventions, and a <b>verification loop</b>, in which a fresh agent session audits the draft against the protocol and the agent applies minimal source-supported fixes. We run it with Qwen3.8-27B in the Pi harness, served locally on two NVIDIA A100 GPUs.
             </p>
           </div>
-          <div class="gain-row" aria-label="Gains over Qwen3.8-27B without TrialScribe, in F1 points">
+          <div class="gain-row" aria-label="Gains over Qwen3.8-27B without TrialScribe, in points">
             <div class="gain"><span class="d">+9.2</span><span class="m">Indication F1</span></div>
             <div class="gain"><span class="d">+15.2</span><span class="m">Eligibility criteria F1</span></div>
             <div class="gain"><span class="d">+22.2</span><span class="m">Objective F1</span></div>
             <div class="gain"><span class="d">+18.8</span><span class="m">Endpoint F1</span></div>
-            <div class="gain"><span class="d">+17.9</span><span class="m">SoA Activity&ndash;Visit F1</span></div>
+            <div class="gain"><span class="d">+42.6</span><span class="m">SoA Activity&ndash;Visit F1</span></div>
+            <div class="gain"><span class="d">+37.1</span><span class="m">Epoch accuracy</span></div>
+            <div class="gain"><span class="d">+6.2</span><span class="m">Activity recall</span></div>
+            <div class="gain"><span class="d">+59.4</span><span class="m">Encounter recall</span></div>
           </div>
           <div class="content has-text-justified">
             <p>
-              With TrialScribe, the local model surpasses GPT-5.6-Sol on endpoint extraction (65.5 vs. 63.6) and comes within 1.9 points of Opus-5 on endpoints. It remains 2.2&ndash;7.5 points below both proprietary agents on indication, eligibility criteria, and objectives, and 13&ndash;15 points below them on page-level SoA extraction.
+              With TrialScribe, the local model surpasses GPT-5.6-Sol on endpoint extraction (65.5 vs. 63.6) and comes within 1.9 points of Opus 5. On structured timelines, it exceeds both proprietary agents on activity recall (88.6 vs. 88.1 and 87.2) and encounter recall (65.2 vs. 23.2 and 0.0). Verification helps most where transcription fidelity dominates, raising eligibility criteria F1 from 72.2 to 82.3. On SoA tables, TrialScribe reaches 75.1 Activity&ndash;Visit F1 but still trails GPT-5.6-Sol and Opus 5 (83.7 and 86.0).
             </p>
           </div>
         </div>
       </div>
       <div class="figure-block">
-        <img src="static/images/trialscribe_results.png" alt="F1 scores of Qwen3.8-27B with and without TrialScribe, compared with Opus-5 and GPT-5.6-Sol." loading="lazy">
-        <p class="figure-caption">Qwen3.8-27B with TrialScribe, the same model without it, and two proprietary coding agents. The span above each pair of Qwen bars gives the gain in points.</p>
+        <img src="static/images/trialscribe_gains.png" alt="Qwen3.8-27B with and without TrialScribe, compared with Opus 5 and GPT-5.6-Sol, on eight metrics." loading="lazy">
+        <p class="figure-caption">Qwen3.8-27B with TrialScribe, the same model without it, Opus 5, and GPT-5.6-Sol. The span above each Qwen bar gives the gain in points.</p>
       </div>
     </div>
   </section>
@@ -756,7 +769,7 @@
       </div>
       <!-- TODO: Replace with the final citation. -->
       <pre id="bibtex-code"><code>@article{trialpdbench2026,
-  title={Can Coding Agents Reliably Perform Clinical Trial Protocol Digitization?},
+  title={The Last Mile of Coding Agents for Long-Document Tasks: An Empirical Study on Clinical Trial Protocol Digitization},
   author={Lin, Jiacheng and Low, Geoff and Agarwal, Nishit and Jain, Rahul and Shafquat, Afrah and Beigi, Mandis and Sun, Jimeng},
   year={2026}
 }</code></pre>
